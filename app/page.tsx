@@ -16,15 +16,15 @@ const x = Lato({
 
 export default function Home() {
   return (
-    <div className="h-screen flex flex-col items-center justify-center">
+    <div className="flex h-[calc(100vh-60px)] flex-col items-center justify-center">
       <h1
-        className={`${x.className} font-semibold leading-none text-[100px] text-transparent`}
+        className={`${x.className} text-[100px] font-semibold leading-none text-transparent`}
         style={{ WebkitTextStrokeWidth: "1px", WebkitTextStrokeColor: "black" }}
       >
         Exceptional
       </h1>
       <h1
-        className={`${x.className} font-semibold leading-none text-[100px] text-transparent`}
+        className={`${x.className} text-[100px] font-semibold leading-none text-transparent`}
         style={{ WebkitTextStrokeWidth: "1px", WebkitTextStrokeColor: "black" }}
       >
         Quality
