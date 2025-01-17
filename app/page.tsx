@@ -3,6 +3,8 @@ import { Lato } from "next/font/google";
 
 import heroImg from "@/public/home/hero.png";
 
+import Innovation from "@/components/landingpage/Innovation";
+
 // Noto Sans, Kanit
 // const x = Work_Sans({
 //   subsets: ["latin"],
@@ -16,6 +18,7 @@ const x = Lato({
 
 export default function Home() {
   return (
+<div>
     <div className="flex h-[calc(100vh-60px)] flex-col items-center justify-center">
       <h1
         className={`${x.className} text-[100px] font-semibold leading-none text-transparent`}
@@ -30,6 +33,10 @@ export default function Home() {
         Quality
       </h1>
       <Image src={heroImg} alt="A diagram" className="object-contain" />
+      
     </div>
+    <Innovation/>
+    <div className="bg-yellow-50 h-[1000px]" />
+    </div> 
   );
 }
