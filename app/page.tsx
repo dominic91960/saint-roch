@@ -1,7 +1,7 @@
-import Image from "next/image";
-import { Lato } from "next/font/google";
 
-import heroImg from "@/public/home/hero.png";
+// import { Lato } from "next/font/google";
+
+
 
 
 import Inven from "@/components/landingpage/inven";
@@ -11,10 +11,10 @@ import Inven from "@/components/landingpage/inven";
 //   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 // });
 
-const x = Lato({
-  subsets: ["latin"],
-  weight: ["100", "300", "400", "700", "900"],
-});
+// const x = Lato({
+//   subsets: ["latin"],
+//   weight: ["100", "300", "400", "700", "900"],
+// });
 
 export default function Home() {
   return (
