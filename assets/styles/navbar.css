@@ -1,0 +1,32 @@
+.mobile-nav-toggle > div {
+  transition: transform 600ms ease-out;
+}
+
+.mobile-nav-toggle.active > div {
+  transform: rotate(180deg);
+  background-color: transparent;
+}
+
+.mobile-nav-toggle.active > div::before {
+  transform: translateY(0) rotate(45deg);
+}
+
+.mobile-nav-toggle.active > div::after {
+  transform: translateY(0) rotate(-45deg);
+}
+
+.mobile-nav {
+  transition: all 400ms ease-out;
+  transition-behavior: allow-discrete;
+}
+
+.mobile-nav.hidden {
+  display: none;
+  height: 0;
+}
+
+@starting-style {
+  .mobile-nav {
+    height: 0;
+  }
+}

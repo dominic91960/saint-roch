@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 
 import Innoimgae from "@/assets/images/product.png";
-import "@/assets/styles/inven.css";
+import "@/assets/styles/innovation.css";
 
 const Innovation = () => {
   return (
