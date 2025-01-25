@@ -16,7 +16,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-white/70 via-white/80 to-white/70 sm:bg-[linear-gradient(to_right,transparent,rgba(255,255,255,0.8),rgba(255,255,255,0.8),transparent)]"></div>
       <div className="container relative z-[1] mx-auto px-[15px] text-center">
         {/* Title */}
-        <h1 className="title-text-stroke text-[40px] font-semibold leading-none text-transparent sm:text-[50px] md:text-[60px] lg:text-[80px] xl:text-[95px] 2xl:text-[108px]">
+        <h1 className="title-text-stroke text-[40px] font-semibold leading-none sm:text-[50px] md:text-[60px] lg:text-[80px] xl:text-[95px] 2xl:text-[108px]">
           Exceptional <br /> Quality
         </h1>
 
