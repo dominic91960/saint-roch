@@ -8,6 +8,7 @@ import Innovation from "@/components/landing-page/Innovation";
 import Sustainability from "@/components/landing-page/Sustainability";
 import OriginCountry from "@/components/landing-page/OriginCountry";
 import ContactButton from "@/components/ContactButton";
+import QCStandards from "@/components/landing-page/QCStandards";
 
 import Innoimgae from "@/assets/images/landing-page/innovation/product.png";
 
@@ -31,6 +32,7 @@ export default function Home() {
       </div>
       <div className="h-[20vh]"></div>
       <OriginCountry />
+      <QCStandards />
       <ContactButton />
       <div className="h-[200vh]"></div>
     </div>

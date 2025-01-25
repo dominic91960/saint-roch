@@ -13,8 +13,10 @@ const OriginCountry = () => {
             <div
               className={`${i === 0 ? "text-right" : ""} text-[54px] uppercase leading-[0.9em] sm:text-[88px] md:text-[122px] lg:text-[156px] xl:text-[180px] 2xl:text-[200px]`}
             >
+              {/* Made in */}
               <h1 className="title-text-stroke">Made in</h1>
 
+              {/* Country and power rating */}
               <div
                 className={`flex ${i === 0 ? "" : "flex-row-reverse"} flex-wrap-reverse items-baseline justify-end gap-[0.2em]`}
               >
