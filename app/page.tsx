@@ -1,13 +1,13 @@
 import Image from "next/image";
 
-import { IoCall } from "react-icons/io5";
-
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/landing-page/Hero";
 import FeaturedProducts from "@/components/landing-page/FeaturedProducts";
 import MainCategories from "@/components/landing-page/MainCategories";
 import Innovation from "@/components/landing-page/Innovation";
 import Sustainability from "@/components/landing-page/Sustainability";
+import OriginCountry from "@/components/landing-page/OriginCountry";
+import ContactButton from "@/components/ContactButton";
 
 import Innoimgae from "@/assets/images/landing-page/innovation/product.png";
 
@@ -29,12 +29,10 @@ export default function Home() {
           alt="product"
         />
       </div>
-      <button className="fixed bottom-[5%] right-0 z-40 inline-flex translate-x-[1em] items-center justify-center gap-[0.5em] rounded-s-full bg-white p-[0.3em] pe-[2.2em] font-semibold shadow-md transition-transform ease-in hover:translate-x-0">
-        <span className="rounded-full bg-primary p-[0.5em] text-white">
-          <IoCall />
-        </span>
-        Contact Us
-      </button>
+      <div className="h-[20vh]"></div>
+      <OriginCountry />
+      <ContactButton />
+      <div className="h-[200vh]"></div>
     </div>
   );
 }
