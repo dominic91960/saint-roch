@@ -21,7 +21,7 @@ const Hero = () => {
         </h1>
 
         {/* Image */}
-        <div className="2xl:-mt-[20px]w-[290px] mx-auto sm:-mt-[5px] sm:w-[350px] md:-mt-[10px] md:w-[410px] lg:-mt-[15px] lg:w-[480px] xl:-mt-[18px] xl:w-[550px] 2xl:w-[592px]">
+        <div className="mx-auto w-[290px] sm:-mt-[5px] sm:w-[350px] md:-mt-[10px] md:w-[410px] lg:-mt-[15px] lg:w-[480px] xl:-mt-[18px] xl:w-[550px] 2xl:-mt-[20px] 2xl:w-[592px]">
           <Image src={hero} alt="Hero" />
         </div>
 
