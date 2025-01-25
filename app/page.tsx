@@ -1,16 +1,20 @@
 import Image from "next/image";
 
+import { IoCall } from "react-icons/io5";
+
 import Navbar from "@/components/Navbar";
+import Hero from "@/components/landing-page/Hero";
 import Innovation from "@/components/landing-page/Innovation";
 import Sustainability from "@/components/landing-page/Sustainability";
 
-import Innoimgae from "@/assets/images/product.png";
+import Innoimgae from "@/assets/images/landing-page/innovation/product.png";
 
 export default function Home() {
   return (
     <div className="h-[100vh] overflow-auto bg-white">
       <Navbar />
-      <div className="h-[80vh]"></div>
+      <Hero />
+      <div className="h-[150vh]"></div>
       <Innovation />
       <div className="h-[15vh]"></div>
       <Sustainability />
@@ -21,6 +25,12 @@ export default function Home() {
           alt="product"
         />
       </div>
+      <button className="fixed bottom-[5%] right-0 z-40 inline-flex translate-x-[1em] items-center justify-center gap-[0.5em] rounded-s-full bg-white p-[0.3em] pe-[2.2em] font-semibold shadow-md transition-transform ease-in hover:translate-x-0">
+        <span className="rounded-full bg-primary p-[0.5em] text-white">
+          <IoCall />
+        </span>
+        Contact Us
+      </button>
     </div>
   );
 }

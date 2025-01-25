@@ -31,7 +31,7 @@ const Navbar = () => {
 
   const toggleMobileNav = () => setIsMobileNavOpen((prev) => !prev);
   const getColor = (currentPath: string) => {
-    const activeClasses = "text-[#F8001E] border-b-[#F8001E]";
+    const activeClasses = "text-primary border-b-primary";
     const inactiveClasses = "text-black border-b-black/30";
 
     if (path === currentPath) return activeClasses;
@@ -41,7 +41,7 @@ const Navbar = () => {
 
   return (
     <section
-      className={`relative z-50 flex h-[60px] items-center bg-white ${inter.className} text-[16px] shadow-lg`}
+      className={`relative z-50 flex h-[60px] items-center bg-white ${inter.className} text-[16px] shadow-[0_0_5px_rgba(0,0,0,0.6)]`}
     >
       {/* Contains logo, desktop nav links and mobile toggle */}
       <div className="container mx-auto flex items-center justify-between px-[15px]">
@@ -57,7 +57,7 @@ const Navbar = () => {
             <Link
               key={to}
               href={to}
-              className={`${getColor(to)} hover:text-[#F8001E]`}
+              className={`${getColor(to)} hover:text-primary`}
             >
               {label}
             </Link>
@@ -82,7 +82,7 @@ const Navbar = () => {
             <Link
               key={to}
               href={to}
-              className={`w-full border-b py-[0.5em] ${getColor(to)} hover:text-[#F8001E]`}
+              className={`w-full border-b py-[0.5em] ${getColor(to)} hover:text-primary`}
             >
               {label}
             </Link>

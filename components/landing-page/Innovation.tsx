@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-import Innoimgae from "@/assets/images/product.png";
+import Innoimgae from "@/assets/images/landing-page/innovation/product.png";
 import "@/assets/styles/innovation.css";
 
 const Innovation = () => {
