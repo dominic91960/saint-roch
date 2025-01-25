@@ -60,7 +60,7 @@ const certifications = [
 
 const Certifications = () => {
   return (
-    <section className="container mx-auto px-[15px] text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[15.5px] 2xl:text-[16px]">
+    <section className="container mx-auto px-[15px] pb-[3em] text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[15.5px] 2xl:text-[16px]">
       <Swiper
         modules={[Autoplay, Pagination]}
         pagination={{ clickable: true, dynamicBullets: true }}

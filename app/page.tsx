@@ -36,7 +36,6 @@ export default function Home() {
       <QCStandards />
       <Certifications />
       <ContactButton />
-      <div className="h-[200vh]"></div>
     </div>
   );
 }
