@@ -87,12 +87,13 @@ const Certifications = () => {
         {certifications.map(({ id, title, desc }) => (
           <SwiperSlide key={id}>
             <div className="w-full pb-[40px]">
-              <article className="mx-auto w-fit space-y-[1em] rounded-[1em] bg-[#F1F1F1] p-[2em]">
+              <article className="space-y-[1em] rounded-[1em] bg-[#F1F1F1] p-[2em] sm:mx-auto sm:w-fit">
                 <GrCertificate className="text-[4em] text-primary" />
                 <h1 className="text-[2em] font-semibold leading-none">
-                  {title.split(" ")[0]} <br /> {title.split(" ")[1]}
+                  {title.split(" ")[0]} <br className="hidden sm:inline" />
+                  {title.split(" ")[1]}
                 </h1>
-                <p className="max-w-[27ch] font-medium">{desc}</p>
+                <p className="font-medium sm:max-w-[27ch]">{desc}</p>
                 <button className="text-primary hover:opacity-80">
                   See more...
                 </button>
