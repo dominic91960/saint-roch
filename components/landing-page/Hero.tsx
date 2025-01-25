@@ -22,7 +22,7 @@ const Hero = () => {
 
         {/* Image */}
         <div className="mx-auto w-[290px] sm:-mt-[5px] sm:w-[350px] md:-mt-[10px] md:w-[410px] lg:-mt-[15px] lg:w-[480px] xl:-mt-[18px] xl:w-[550px] 2xl:-mt-[20px] 2xl:w-[592px]">
-          <Image src={hero} alt="Hero" />
+          <Image src={hero} alt="Hero" className="object-contain" />
         </div>
 
         {/* Hero text */}
@@ -33,7 +33,7 @@ const Hero = () => {
 
         {/* CTA */}
         <div className="mt-[1.8em] flex flex-col items-center justify-center gap-[1em] sm:flex-row">
-          <Button variant="primary">Explore uur boilers</Button>
+          <Button variant="primary">Explore Our boilers</Button>
           <Button size="none">
             Learn more about sustainability <HiArrowLongRight />
           </Button>

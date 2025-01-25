@@ -4,6 +4,7 @@ import { IoCall } from "react-icons/io5";
 
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/landing-page/Hero";
+import FeaturedProducts from "@/components/landing-page/FeaturedProducts";
 import Innovation from "@/components/landing-page/Innovation";
 import Sustainability from "@/components/landing-page/Sustainability";
 
@@ -14,6 +15,7 @@ export default function Home() {
     <div className="h-[100vh] overflow-auto bg-white">
       <Navbar />
       <Hero />
+      <FeaturedProducts />
       <div className="h-[150vh]"></div>
       <Innovation />
       <div className="h-[15vh]"></div>
