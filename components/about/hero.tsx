@@ -6,9 +6,13 @@ import Since1903 from '../../assets/images/about/since1903.png'
 import TheRokor from '../../assets/images/about/therokor.png'
 import Footerimage from '../../assets/images/about/footerimage.png'
 import HeriImage from '../../assets/images/about/home.jpg'
+import Navbar from "../Navbar";
 function Hero() {
   return (
+    <div>
+      <Navbar />
     <div className="relative">
+
      <div className="grid grid-cols-2 gap-11">
       <div className="">
       <Image
@@ -142,6 +146,7 @@ function Hero() {
 <div className="w-full">
  <div className="h-[300px] bg-black"></div>
 </div>
+    </div>
     </div>
   );
 }
