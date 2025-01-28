@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import React from "react";
 import Image from "next/image";
 import Innoimgae from "@/assets/images/landing-page/innovation/product.png";
@@ -5,31 +8,55 @@ import '../about/aboutstyle.css'
 import Since1903 from '../../assets/images/about/since1903.png'
 import TheRokor from '../../assets/images/about/therokor.png'
 import Footerimage from '../../assets/images/about/footerimage.png'
-import HeriImage from '../../assets/images/about/home.jpg'
+import HeriImage from '../../assets/images/about/HeroAbout.jpg'
 import Navbar from "../Navbar";
+
+import { SlideLeft, SlideRight, SlideUp } from "@/lib/utils";
+
+
+
 function Hero() {
   return (
     <div>
       <Navbar />
-    <div className="relative">
-
-     <div className="grid grid-cols-2 gap-11">
-      <div className="">
-      <Image
-            className="aboutUs sm:h-[300px] lg:h-[400px] xl:h-[420px] 2xl:h-[600px] w-full rounded-br-[15px] sm:rounded-br-[30px] md:rounded-br-[30px]"
-            src={HeriImage}
-            alt="product"
+      <div className="relative">
+        <div className="grid grid-cols-2 gap-11">
+          <div>
+          <motion.div 
+  variants={SlideRight(0.5)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}
+>
+              <Image
+                className="aboutUs sm:h-[300px] lg:h-[400px] xl:h-[420px] 2xl:h-[600px] w-full "
+                src={HeriImage}
+                alt="product"
           />
-
+      </motion.div>
       </div>
       <div></div>
      </div>
 
      <div className="container mx-auto   absolute inset-0 mt-[5px] sm:mt-[40px] md:mt-[50px] lg:mt-[50px] xl:mt-[80px]  justify-end pr-5 pl-5 sm:pr-5 sm:pl-5 md:pr-10 md:pl-10 lg:pr-10 lg:pl-10 xl:pl-10 xl:pr-10 2xl:pl-0 2xl:pr-0">
       <div>
+      <motion.div 
+  variants={SlideLeft(0.5)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}
+>
      <h1 className="text-right title-text-stroke  font-semibold leading-none text-[40px] sm:text-[70px] md:text-[80px] lg:text-[100px] xl:text-[150px] 2xl:text-[200px]">
     ABOUT <br /> US
     </h1>
+    </motion.div>
+
+    <motion.div 
+  variants={SlideLeft(0.5)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}
+>
     <p className="text-right font-semibold text-[8px] sm:text-[14px] md:text-[15px] xl:text-[23px] 2xl:text-[30px] mb-1 sm:mb-3">
                 Learn More About Our Team and Vision
               </p>
@@ -37,7 +64,7 @@ function Hero() {
       
   <div className="bg-red-600 w-[100px] sm:w-[200px] h-[2px] sm:h-[5px]"></div>
 </div>
- 
+</motion.div>
   
   </div>
 
@@ -47,9 +74,52 @@ function Hero() {
         pr-5 pl-5 sm:pr-5 sm:pl-5 md:pr-10 md:pl-10 lg:pr-10 lg:pl-10 xl:pl-10 xl:pr-10 2xl:pl-0 2xl:pr-0
         pt-10  md:pt-20 
         ">
-      <div className="text-[30px] sm:text-[60px] lg:text-[80px] xl:text-[110px] 2xl:text-[140px] leading-tight font-semibold">
-      A Legacy of Innovation and Excellence in Heating Solutions
-      </div>
+         <motion.div 
+  variants={SlideRight(0.5)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}
+>
+  <div className="text-[30px] sm:text-[60px] lg:text-[80px] xl:text-[110px] 2xl:text-[140px] leading-tight font-semibold">
+    A Legacy of
+  </div>
+</motion.div>
+
+<motion.div 
+  variants={SlideRight(0.7)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}
+>
+  <div className="text-[30px] sm:text-[60px] lg:text-[80px] xl:text-[110px] 2xl:text-[140px] leading-tight font-semibold">
+  Innovation and
+  </div>
+  </motion.div> 
+
+  <motion.div 
+  variants={SlideRight(0.9)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}
+>
+  <div className="text-[30px] sm:text-[60px] lg:text-[80px] xl:text-[110px] 2xl:text-[140px] leading-tight font-semibold">
+  Excellence in
+  </div>
+  </motion.div>
+
+  <motion.div 
+  variants={SlideRight(1.1)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}
+>
+  <div className="text-[30px] sm:text-[60px] lg:text-[80px] xl:text-[110px] 2xl:text-[140px] leading-tight font-semibold">
+  Heating Solutions
+  </div>
+  </motion.div>  
+  
+   
+     
       <div className="text-[16px] sm:text-[22px] md:text-[26px] lg:text-[23px] xl:text-[30px] 2xl:text-[40px] text-red-600 leading-tight font-semibold mt-2 2xl:mt-6">
       Pioneering Sustainable and High-Performance Heating Systems
       </div>
@@ -61,11 +131,18 @@ function Hero() {
                                                    rounded-br-[10px]  sm:rounded-br-[20px] md:rounded-br-[30px] lg:rounded-br-[30px] xl:rounded-br-[50px] ">
         <div className="mr-[10px] sm:mr-[100px] md:mr-[100px] mt-[30px]  sm:mt-[50px] md:mt-[60px] lg:mt-[60px] xl:mt-[100px]">
         <div className=" flex justify-end">
-        <Image
-            className="aboutUs h-[140px] sm:h-[200px] md:h-[220px] lg:h-[300px] xl:h-[450px] 2xl:h-[500px] w-auto"
-            src={Innoimgae}
-            alt="product"
-          /> 
+        <motion.div
+  initial={{ opacity: 0, scale: 0.5 }}
+  whileInView={{ opacity: 1, scale: 1 }}
+  transition={{ type: "spring", stiffness: 100, delay: 0.3 }}
+>
+  <Image
+    className="aboutUs h-[140px] sm:h-[200px] md:h-[220px] lg:h-[300px] xl:h-[450px] 2xl:h-[500px] w-auto"
+    src={Innoimgae}
+    alt="product"
+  />
+</motion.div>
+
         </div>
         <div className="flex justify-end text-right text-[23px] sm:text-[30px] md:text-[40px] lg:text-[50px] xl:text-[70px] 2xl:text-[100px]  leading-tight font-semibold mt-2 2xl:mt-6 mb-[30px]  sm:mb-[50px] md:mb-[60px] lg:mb-[60px] xl:mb-[100px]">
         Since 1903, Saint <br/> Roch has been a <br/>leader ininnovative<br/> heating solutions.
@@ -76,26 +153,42 @@ function Hero() {
 
       <div className="col col-span-1 ">
       <div className=" flex justify-end ">
+      
         <Image
             className="absolute w-[90px] sm:w-[180px] md:w-[230px] lg:w-[230px] xl:w-[350px] 2xl:w-[400px] h-auto mt-[180px] sm:mt-[220px] md:mt-[250px] lg:mt-[300px] xl:mt-[500px] 2xl:mt-[700px]"
             src={Since1903}
             alt="product"
           /> 
+          
         </div>
       </div>
      </div>
 
      {/* section 03 */}
      <div className="container mx-auto p-[15px] sm:pl-[80px] sm:pr-[80px] mt-[40px] sm:mt-[70px] md:mt-[70px] lg:mt-[100px] xl:mt-[150px] 2xl:mt-[200px] mb-[30px] sm:mb-[50px] md:mb-[60px] lg:mb-[50px] xl:mb-[80px] 2xl:mb-[100px]">
+     <motion.div 
+  variants={SlideLeft(0.5)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}
+>
       <p className="text-[20px] sm:text-[40px]  md:text-[40px] lg:text-[40px] xl:text-[40px] 2xl:text-[50px] leading-none lg:ml-[300px] xl:ml-[500px]">
       We won the 1984 Energy Grand Prize for our eco-grouping concept and introduced low-emission boilers in the 1990s.
       </p>
+      </motion.div>
       <div className="bg-red-600 w-[100px] sm:w-[200px] h-[2px] sm:h-[5px] lg:ml-[300px] xl:ml-[500px] mt-[10px] sm:mt-[20px]"></div>
      </div>
      <div className="container mx-auto p-[15px] sm:pl-[80px] sm:pr-[80px] ">
+     <motion.div 
+  variants={SlideRight(0.5)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}
+>
   <p className="text-[20px] sm:text-[40px]  md:text-[40px] lg:text-[40px] xl:text-[40px] 2xl:text-[50px] text-right leading-none md:mr-[100px] lg:mr-[200px] xl:mr-[500px]">
     We won the 1984 Energy Grand Prize for our eco-grouping concept and introduced low-emission boilers in the 1990s.
   </p>
+  </motion.div>
   <div className="flex justify-end mb-[100px]">
     <div className="bg-red-600 w-[100px] sm:w-[200px] h-[2px] sm:h-[5px] mt-[10px] sm:mt-[20px] md:mr-[100px] lg:mr-[200px] xl:mr-[500px]"></div>
   </div>
@@ -105,11 +198,18 @@ function Hero() {
 {/* section 04 */}
 <div className="flex section04 mt-[10px] sm:mt-[50px] xl:mt-[100px] gap-3 sm:gap-8 lg:gap-16 pr-[20px] sm:pr-[30px] lg:pr-[50px] items-start">
   <div className="flex-none w-[200px] sm:w-[250px] md:w-[300px] lg:w-[300px] xl:w-[500px]">
+  <motion.div 
+  variants={SlideRight(0.5)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}
+>
     <Image
       className="w-full h-auto"
       src={TheRokor}
       alt="product"
     />
+    </motion.div>
   </div>
   <div className="flex-1 overflow-hidden">
     <p className="font-semibold leading-none  text-[25px] sm:text-[40px] md:text-[50px] lg:text-[60px] xl:text-[90px] 2xl:text-[130px] overflow-hidden">
@@ -136,14 +236,21 @@ function Hero() {
 {/* section 05 */}
 <div className="container mx-auto flex justify-center mt-[100px]">
   <div className="w-[200px] sm:w-[250px] md:w-[300px] lg:w-[300px] xl:w-[500px]">
+  <motion.div 
+  variants={SlideUp(0.3)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}
+>
     <Image
       className="w-full h-auto"
       src={Footerimage}
       alt="product"
     />
+    </motion.div>
   </div>
 </div>
-<div className="w-full">
+<div className="w-full absolute">
  <div className="h-[300px] bg-black"></div>
 </div>
     </div>
