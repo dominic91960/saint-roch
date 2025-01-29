@@ -6,7 +6,7 @@ import "@/assets/styles/innovation.css";
 
 const Innovation = () => {
   return (
-    <div className="container mx-auto sm:p-[2rem] mt-[-700px]">
+    <div className="container mx-auto sm:p-[2rem] mt-[-1200px] sm:mt-[-1100px] md:mt-[-1200px] lg:mt-[-700px]">
       <div className="prograss relative w-[100%] bg-white">
         <div className="relative">
           <h1 className="relative mt-[-180px] overflow-hidden text-[100px] font-bold text-[#cccccc] sm:mt-[-230px] sm:text-[120px] md:mt-[-270px] md:text-[200px] lg:mt-[-450px] lg:text-[300px] xl:mt-[-550px] xl:text-[400px] 2xl:mt-[-700px] 2xl:text-[600px]">
@@ -20,7 +20,7 @@ const Innovation = () => {
           <div className="text relative mt-[100px] grid grid-cols-2 sm:gap-4">
             <div className="mt-[-200px]"></div>
             <div className="mt-[-130px] h-[300px] sm:mt-[-140px] md:mt-[-160px] lg:mt-[-200px] xl:mt-[-240px] 2xl:mt-[-300px]">
-              <h1 className="text-[20px] font-bold sm:text-[25px] md:text-[35px] lg:text-[50px] xl:text-[60px] 2xl:text-[80px]">
+              <h1 className="text-[20px]  font-bold sm:text-[25px] md:text-[35px] lg:text-[50px] xl:text-[60px] 2xl:text-[80px]">
                 INNOVATION
               </h1>
               <h1 className="text-[12px] text-[#9C9C9C] sm:mt-[-10px] sm:text-[13px] md:mt-[-10px] md:text-[16px] lg:text-[20px] xl:mt-[-20px] xl:text-[25px] 2xl:mt-[-30px] 2xl:text-[30px]">
