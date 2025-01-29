@@ -3,7 +3,7 @@ import Image from "next/image";
 import Card01 from '../../assets/images/landing/card01.png'
 import '../card_animation/cardanimationstyle.css'
 import { Button } from "../ui/button";
-function cardanimation() {
+function cardanimation01() {
   return (
     <div>
         <div className='container mx-auto mb-[50px] mt-[100px]'>
@@ -23,7 +23,7 @@ function cardanimation() {
         <div className='cards'>
             <div className='cards-grid'>
 <div className='card'>
-    <div className='card-inner bg-white border-t-4 border-black h-[1100px]  md:h-[1000px] lg:h-[500px] xl:h-[500px] 2xl:h-[700px] flex items-center'>
+    <div className='card-inner bg-white border-t-4 border-black h-[1100px]  sm:h-[1100px]  md:h-[1000px] lg:h-[500px] xl:h-[500px] 2xl:h-[700px] flex items-center'>
     <div className='grid grid-cols-1 lg:grid-cols-2 container'>
         <div className=''>
         <Image
@@ -106,9 +106,8 @@ function cardanimation() {
       </div>
      
       </div>
-      <div className='bg-white h-[500px] sm:h-[200px] md:h-[100px] lg:h-0'></div>
-
-     
+<div className='bg-white h-[500px] sm:h-[10px] md:h-[100px] lg:h-[250px] xl:h-[100px] '></div>
+      {/* section 02 */}
 
 
       
@@ -117,4 +116,4 @@ function cardanimation() {
   )
 }
 
-export default cardanimation
+export default cardanimation01
