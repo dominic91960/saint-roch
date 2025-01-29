@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import React from "react";
 import Image from "next/image";
 
@@ -22,9 +25,15 @@ const Hero = () => {
 
         {/* Image */}
         <div className="mx-auto w-[290px] sm:-mt-[5px] sm:w-[350px] md:-mt-[10px] md:w-[410px] lg:-mt-[15px] lg:w-[480px] xl:-mt-[18px] xl:w-[550px] 2xl:-mt-[20px] 2xl:w-[592px]">
+        <motion.div   
+  initial={{ opacity: 0, scale: 0.5 }}
+  whileInView={{ opacity: 1, scale: 1 }}
+  transition={{ type: "spring", stiffness: 100, delay: 0.3 }}
+>
           <Image src={hero} alt="Hero" className="object-contain" />
+        
+        </motion.div>
         </div>
-
         {/* Hero text */}
         <p className="mx-auto max-w-[52ch] font-bold">
           Car engine png images, Automobile Engineering, Car Mechanical

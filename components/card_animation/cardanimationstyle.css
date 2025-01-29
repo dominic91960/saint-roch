@@ -1,0 +1,63 @@
+.landingcardssection .cards{
+    --card-height: 80vh;
+    --card-gap: 20px;
+    --num: 4;
+}
+
+.landingcardssection .cards .cards-grid .card:nth-child(1){
+    --i:1;
+}
+.landingcardssection .cards .cards-grid .card:nth-child(2){
+    --i:2;
+}
+.landingcardssection .cards .cards-grid .card:nth-child(3){
+    --i:3;
+}
+.landingcardssection .cards .cards-grid .card:nth-child(4){
+    --i:4;
+}
+
+.landingcardssection .cards .cards-grid .card {
+    height: var(--card-height, 200px);
+    position: sticky;
+    /* top: calc(30px + (var(--i) * 30px)); */
+    top: -500px;
+}
+
+.landingcardssection .cards .cards-grid .card {
+    height: var(--card-height, 200px);
+    position: sticky;
+    /* top: calc(30px + (var(--i) * 30px)); */
+    top: -500px;
+}
+
+
+
+
+
+
+
+.landingcardssection .cards .cards-grid .card {
+    height: var(--card-height, 200px);
+    position: sticky;
+    /* top: calc(30px + (var(--i) * 30px)); */
+    top: -500px;
+}
+
+/* Medium screens (≥ 640px) */
+@media (min-width: 640px) {
+    .landingcardssection .cards .cards-grid .card {
+        height: var(--card-height, 200px);
+    position: sticky;
+    /* top: calc(30px + (var(--i) * 30px)); */
+    top: -500px;
+    }
+}
+
+@media (min-width: 768px) {
+    .landingcardssection .cards .cards-grid .card {
+        height: var(--card-height, 200px);
+        position: sticky;
+        top: calc(30px + (var(--i) * 30px));
+    }
+}
