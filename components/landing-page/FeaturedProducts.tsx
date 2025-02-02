@@ -4,8 +4,14 @@ import React from "react";
 import Image from "next/image";
 
 import { useSwiper, Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import {
+  Autoplay,
+  EffectCreative,
+  Pagination,
+  Navigation,
+} from "swiper/modules";
 import "swiper/css";
+import "swiper/css/effect-creative";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { IoIosArrowBack } from "react-icons/io";
@@ -77,7 +83,7 @@ const FeaturedProducts = () => {
       <Swiper
         modules={[Autoplay, Pagination]}
         pagination={{ clickable: true }}
-        speed={1000}
+        speed={2000}
         loop={true}
         spaceBetween={10}
         slidesPerView={1}
@@ -105,16 +111,28 @@ const FeaturedProducts = () => {
                 {/* Image with number*/}
                 <div className="relative mx-auto -mt-[8%] w-[232px] sm:w-[288px] md:w-[344px] lg:w-[400px] xl:w-[455px] 2xl:w-[512px]">
                   <Swiper
-                    modules={[Autoplay, Navigation]}
-                    speed={1000}
+                    modules={[Autoplay, EffectCreative, Navigation]}
+                    grabCursor
+                    effect={"creative"}
+                    creativeEffect={{
+                      prev: {
+                        translate: [0, 0, -400],
+                        opacity: 0,
+                      },
+                      next: {
+                        translate: ["100%", 0, 0],
+                      },
+                    }}
+                    speed={2000}
                     loop={true}
                     spaceBetween={10}
                     slidesPerView={1}
-                    // autoplay={{
-                    //   reverseDirection: true,
-                    //   disableOnInteraction: false,
-                    //   pauseOnMouseEnter: false,
-                    // }}
+                    autoplay={{
+                      delay: 5000,
+                      // reverseDirection: true,
+                      disableOnInteraction: false,
+                      pauseOnMouseEnter: false,
+                    }}
                     className="mySwiper"
                   >
                     {images.map((image, i) => (
