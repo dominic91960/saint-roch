@@ -6,7 +6,7 @@ import "@/assets/styles/innovation.css";
 
 const Innovation = () => {
   return (
-    <div className="container mx-auto sm:p-[2rem] mt-[-1100px] sm:mt-[-1300px] md:mt-[-1200px] lg:mt-[-700px] xl:mt-[-500px]">
+    <div className="container mx-auto sm:p-[2rem] mt-[-1100px] sm:mt-[-1300px] md:mt-[-1200px] lg:mt-[-700px] xl:mt-[-400px] 2xl:mt-[-500px]">
       <div className="prograss relative w-[100%] bg-white">
         <div className="relative">
           <h1 className="relative mt-[-180px] overflow-hidden text-[100px] font-bold text-[#cccccc] sm:mt-[-230px] sm:text-[120px] md:mt-[-270px] md:text-[200px] lg:mt-[-450px] lg:text-[300px] xl:mt-[-550px] xl:text-[400px] 2xl:mt-[-700px] 2xl:text-[600px]">
