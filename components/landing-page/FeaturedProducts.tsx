@@ -109,47 +109,48 @@ const FeaturedProducts = () => {
                 </h2>
 
                 {/* Image with number*/}
-                <div className="relative mx-auto -mt-[8%] w-[232px] sm:w-[288px] md:w-[344px] lg:w-[400px] xl:w-[455px] 2xl:w-[512px]">
-                  <Swiper
-                    modules={[Autoplay, EffectCreative, Navigation]}
-                    grabCursor
-                    effect={"creative"}
-                    creativeEffect={{
-                      prev: {
-                        translate: [0, 0, -400],
-                        opacity: 0,
-                      },
-                      next: {
-                        translate: ["100%", 0, 0],
-                      },
-                    }}
-                    speed={2000}
-                    loop={true}
-                    spaceBetween={10}
-                    slidesPerView={1}
-                    autoplay={{
-                      delay: 5000,
-                      // reverseDirection: true,
-                      disableOnInteraction: false,
-                      pauseOnMouseEnter: false,
-                    }}
-                    className="mySwiper"
-                  >
-                    {images.map((image, i) => (
-                      <SwiperSlide key={i}>
+
+                <Swiper
+                  modules={[Autoplay, EffectCreative, Navigation]}
+                  grabCursor
+                  effect={"creative"}
+                  creativeEffect={{
+                    prev: {
+                      translate: [0, 0, -400],
+                      opacity: 0,
+                    },
+                    next: {
+                      translate: ["100%", 0, 0],
+                    },
+                  }}
+                  speed={2000}
+                  loop={true}
+                  spaceBetween={10}
+                  slidesPerView={1}
+                  autoplay={{
+                    delay: 5000,
+                    // reverseDirection: true,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: false,
+                  }}
+                  className="mySwiper -mt-[12%]"
+                >
+                  {images.map((image, i) => (
+                    <SwiperSlide key={i}>
+                      <div className="relative mx-auto mt-[8%] w-[232px] sm:w-[288px] md:w-[344px] lg:w-[400px] xl:w-[455px] 2xl:w-[512px]">
                         <Image
                           src={image}
                           alt={category}
                           className="relative z-[1] object-contain"
                         />
-                      </SwiperSlide>
-                    ))}
-                    <SwiperNavButtons />
-                  </Swiper>
-                  <p className="absolute bottom-0 right-[0.2em] text-[60px] font-bold leading-none text-black/20 sm:text-[78px] md:text-[96px] lg:text-[114px] xl:text-[132px] 2xl:text-[150px]">
-                    {id}
-                  </p>
-                </div>
+                        <p className="absolute bottom-0 right-[0.2em] text-[60px] font-bold leading-none text-black/20 sm:text-[78px] md:text-[96px] lg:text-[114px] xl:text-[132px] 2xl:text-[150px]">
+                          {id}
+                        </p>
+                      </div>
+                    </SwiperSlide>
+                  ))}
+                  <SwiperNavButtons />
+                </Swiper>
 
                 {/* Desc */}
                 <p className="-mt-[2em] me-[1.2em] ms-auto max-w-[38ch] border-e-[0.4em] border-e-primary pe-[0.4em] pt-[2em] text-right text-[11px] leading-tight sm:me-[1.4em] sm:text-[12px] md:me-[1.6em] md:max-w-[46ch] md:text-[12.5px] lg:me-[1.8em] lg:text-[13px] xl:me-[2em] xl:text-[13.5px] 2xl:me-[2em] 2xl:border-e-[0.6em] 2xl:text-[14px]">

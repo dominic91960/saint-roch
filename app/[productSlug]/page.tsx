@@ -16,13 +16,10 @@ const data = [
   },
 ];
 
-interface ProductDetailsPageProps {
-  params: {
-    productSlug: string;
-  };
-}
+type Params = Promise<{ productSlug: string }>;
 
-const ProductDetailsPage: React.FC<ProductDetailsPageProps> = ({ params }) => {
+const ProductDetailsPage = async (props: { params: Params }) => {
+  const params = await props.params;
   const product =
     data.find((prod) => prod.title === params.productSlug) || data[0];
 
