@@ -12,6 +12,8 @@ const buttonVariants = cva(
         default: "text-black hover:text-black/70",
         primary:
           "relative overflow-hidden rounded-full bg-primary text-primary-foreground after:absolute after:inset-0 after:-translate-x-[9em] after:-rotate-45 after:bg-white/50 after:transition-transform after:duration-500 after:ease-in after:content-[''] hover:after:translate-x-[9em]",
+        secondary:
+          "relative overflow-hidden rounded-full bg-[#141414] text-primary-foreground after:absolute after:inset-0 after:-translate-x-[9em] after:-rotate-45 after:bg-white/50 after:transition-transform after:duration-500 after:ease-in after:content-[''] hover:after:translate-x-[9em]",
       },
       size: {
         default: "px-[1em] py-[0.5em]",
