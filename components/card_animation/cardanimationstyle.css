@@ -1,5 +1,5 @@
 .landingcardssection .cards{
-    --card-height: 80vh;
+    --card-height: 400px;
     --card-gap: 20px;
     --num: 4;
 }
@@ -17,19 +17,6 @@
     --i:4;
 }
 
-.landingcardssection .cards .cards-grid .card {
-    height: var(--card-height, 200px);
-    position: sticky;
-    /* top: calc(30px + (var(--i) * 30px)); */
-    top: -500px;
-}
-
-.landingcardssection .cards .cards-grid .card {
-    height: var(--card-height, 200px);
-    position: sticky;
-    /* top: calc(30px + (var(--i) * 30px)); */
-    top: -500px;
-}
 
 
 
@@ -38,25 +25,45 @@
 
 
 .landingcardssection .cards .cards-grid .card {
-    height: var(--card-height, 200px);
+    height: 900px;
     position: sticky;
-    /* top: calc(30px + (var(--i) * 30px)); */
-    top: -500px;
+    top: -300px;
 }
 
-/* Medium screens (≥ 640px) */
+
 @media (min-width: 640px) {
     .landingcardssection .cards .cards-grid .card {
-        height: var(--card-height, 200px);
+        height: 1000px;
     position: sticky;
-    /* top: calc(30px + (var(--i) * 30px)); */
-    top: -500px;
+    top: -400px;
     }
 }
 
 @media (min-width: 768px) {
     .landingcardssection .cards .cards-grid .card {
-        height: var(--card-height, 200px);
+        height: 1000px;
+        position: sticky;
+        top: calc(30px + (var(--i) * 30px));
+    }
+}
+
+@media (min-width: 1024px) {
+    .landingcardssection .cards .cards-grid .card {
+        height: 550px;
+        position: sticky;
+        top: calc(30px + (var(--i) * 30px));
+    }
+}
+@media (min-width: 1280px) {
+    .landingcardssection .cards .cards-grid .card {
+        height: 500px;
+        position: sticky;
+        top: calc(30px + (var(--i) * 30px));
+    }
+}
+@media (min-width: 1536px) {
+    .landingcardssection .cards .cards-grid .card {
+        height: 700px;
         position: sticky;
         top: calc(30px + (var(--i) * 30px));
     }

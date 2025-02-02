@@ -1,8 +1,8 @@
 "use client";
-
+import { motion } from "framer-motion";
 import React from "react";
 import Image from "next/image";
-
+import { SlideLeft} from "@/lib/utils";
 import { useSwiper, Swiper, SwiperSlide } from "swiper/react";
 import {
   Autoplay,
@@ -23,28 +23,35 @@ import "@/assets/styles/swiper-custom-pagination.css";
 const featuredProducts = [
   {
     id: "01",
-    category: "Cast iron boilers",
+    category: "Boilers",
     images: [product, product, product, product],
     emphasis: "Display key",
     desc: "certifications (e.g., ISO 9001, Energy Star, CE Marking) as clickable icons. On hover, provide a brief description of what the certification represents and how it",
   },
   {
     id: "02",
-    category: "Cast iron boilers",
+    category: "Burners",
     images: [product, product, product, product],
     emphasis: "Display key",
     desc: "certifications (e.g., ISO 9001, Energy Star, CE Marking) as clickable icons. On hover, provide a brief description of what the certification represents and how it",
   },
   {
     id: "03",
-    category: "Cast iron boilers",
+    category: "Hot water Tanks",
     images: [product, product, product, product],
     emphasis: "Display key",
     desc: "certifications (e.g., ISO 9001, Energy Star, CE Marking) as clickable icons. On hover, provide a brief description of what the certification represents and how it",
   },
   {
     id: "04",
-    category: "Cast iron boilers",
+    category: "Pumps",
+    images: [product, product, product, product],
+    emphasis: "Display key",
+    desc: "certifications (e.g., ISO 9001, Energy Star, CE Marking) as clickable icons. On hover, provide a brief description of what the certification represents and how it",
+  },
+  {
+    id: "05",
+    category: "Heat pumps",
     images: [product, product, product, product],
     emphasis: "Display key",
     desc: "certifications (e.g., ISO 9001, Energy Star, CE Marking) as clickable icons. On hover, provide a brief description of what the certification represents and how it",
@@ -56,6 +63,8 @@ const SwiperNavButtons = () => {
 
   return (
     <>
+
+
       <button
         className="absolute bottom-0 left-[2%] top-0 z-[1] my-auto hidden h-fit translate-y-[1.2em] text-[2em] text-[#D9D9D9] transition-colors duration-300 hover:text-black/60 sm:block lg:translate-y-1/2"
         onClick={() => swiper.slidePrev()}
@@ -74,6 +83,13 @@ const SwiperNavButtons = () => {
 
 const FeaturedProducts = () => {
   return (
+    <div>
+      <motion.div 
+          variants={SlideLeft(0.5)}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
     <section className="container mx-auto my-[2em] px-[15px] text-[12px] sm:text-[15px] md:text-[18px] lg:text-[21px] xl:text-[24px] 2xl:text-[24px]">
       <h1 className="mb-[0.4em] text-center text-[22px] font-semibold capitalize leading-tight sm:mb-[0.5em] sm:text-[29px] md:mb-[0.6em] md:text-[36px] lg:mb-[0.7em] lg:text-[44px] xl:mb-[0.8em] xl:text-[52px] 2xl:mb-[0.8em] 2xl:text-[60px]">
         Our featured products
@@ -162,6 +178,8 @@ const FeaturedProducts = () => {
         ))}
       </Swiper>
     </section>
+    </motion.div>
+    </div>
   );
 };
 
