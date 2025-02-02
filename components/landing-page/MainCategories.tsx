@@ -12,7 +12,6 @@ const MainCategories = () => {
     <div>
       <Cardanimation />
       <Cardanimation01 />
- 
     </div>
   );
 };
