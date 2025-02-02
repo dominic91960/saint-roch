@@ -24,7 +24,7 @@ export default function Home() {
       <Innovation />
       <div className="h-[15vh]"></div>
       <Sustainability />
-      <div className="relative mt-[-350px] sm:mt-[-1300px] md:mt-[-1250px] lg:mt-[-500px] xl:mt-[-400px] 2xl:mt-[-1000px]">
+      <div className="relative mt-[-350px] sm:mt-[-1300px] md:mt-[-1250px] lg:mt-[-300px] xl:mt-[-400px] 2xl:mt-[-1000px]">
         <Image
           className="relative mx-auto h-auto w-[200px] sm:w-[250px] md:w-[300px] lg:w-[400px] xl:w-[350px] 2xl:w-[450px]"
           src={Innoimgae}
