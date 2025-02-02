@@ -1,8 +1,8 @@
 :root {
   --swiper-pagination-color: #9c9c9c;
-  --swiper-pagination-bullet-size: 16px;
-  --swiper-pagination-bullet-width: 16px;
-  --swiper-pagination-bullet-height: 16px;
+  --swiper-pagination-bullet-size: 12px;
+  --swiper-pagination-bullet-width: 12px;
+  --swiper-pagination-bullet-height: 12px;
   --swiper-pagination-bullet-inactive-color: #d9d9d9;
   --swiper-pagination-bullet-inactive-opacity: 1;
   --swiper-pagination-bullet-opacity: 1;

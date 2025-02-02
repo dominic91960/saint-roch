@@ -10,7 +10,7 @@ import "@/assets/styles/navbar.css";
 const inter = Inter({ subsets: ["latin"] });
 const navLinks = [
   { to: "/", label: "Home" },
-  { to: "/product", label: "Products" },
+  { to: "/commodore", label: "Products" },
   { to: "/about", label: "About Us" },
   { to: "/contact", label: "Contact Us" },
 ];
@@ -18,6 +18,7 @@ const navLinks = [
 const Navbar = () => {
   const path = usePathname();
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
+  console.log(path);
 
   useEffect(() => {
     const closeMobileNav = () => {
@@ -35,7 +36,8 @@ const Navbar = () => {
     const inactiveClasses = "text-black border-b-black/30";
 
     if (path === currentPath) return activeClasses;
-    else if (path.includes(currentPath)) return activeClasses;
+    else if (path.includes(currentPath) && currentPath !== "/")
+      return activeClasses;
     else return inactiveClasses;
   };
 
