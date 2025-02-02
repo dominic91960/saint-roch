@@ -14,8 +14,8 @@ import "swiper/css";
 import "swiper/css/effect-creative";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { IoIosArrowBack } from "react-icons/io";
-import { IoIosArrowForward } from "react-icons/io";
+import { SlArrowLeft } from "react-icons/sl";
+import { SlArrowRight } from "react-icons/sl";
 
 import product from "@/assets/images/landing-page/featured-products/product-one.png";
 import "@/assets/styles/swiper-custom-pagination.css";
@@ -55,20 +55,20 @@ const SwiperNavButtons = () => {
   const swiper = useSwiper();
 
   return (
-    <div className="absolute bottom-0 left-0 z-[1000] flex items-center text-[2em]">
+    <>
       <button
-        className="text-black transition-colors duration-300 hover:text-black/60"
+        className="absolute bottom-0 left-[2%] top-0 z-[1] my-auto hidden h-fit translate-y-[1.2em] text-[2em] text-[#D9D9D9] transition-colors duration-300 hover:text-black/60 sm:block lg:translate-y-1/2"
         onClick={() => swiper.slidePrev()}
       >
-        <IoIosArrowBack />
+        <SlArrowLeft />
       </button>
       <button
-        className="text-black transition-colors duration-300 hover:text-black/60"
+        className="absolute bottom-0 right-[2%] top-0 z-[1] my-auto hidden h-fit translate-y-[1.2em] text-[2em] text-[#D9D9D9] transition-colors duration-300 hover:text-black/60 sm:block lg:translate-y-1/2"
         onClick={() => swiper.slideNext()}
       >
-        <IoIosArrowForward />
+        <SlArrowRight />
       </button>
-    </div>
+    </>
   );
 };
 
@@ -133,7 +133,7 @@ const FeaturedProducts = () => {
                     disableOnInteraction: false,
                     pauseOnMouseEnter: false,
                   }}
-                  className="mySwiper -mt-[12%]"
+                  className="mySwiper -mt-[18%]"
                 >
                   {images.map((image, i) => (
                     <SwiperSlide key={i}>
@@ -143,9 +143,6 @@ const FeaturedProducts = () => {
                           alt={category}
                           className="relative z-[1] object-contain"
                         />
-                        <p className="absolute bottom-0 right-[0.2em] text-[60px] font-bold leading-none text-black/20 sm:text-[78px] md:text-[96px] lg:text-[114px] xl:text-[132px] 2xl:text-[150px]">
-                          {id}
-                        </p>
                       </div>
                     </SwiperSlide>
                   ))}
@@ -153,7 +150,10 @@ const FeaturedProducts = () => {
                 </Swiper>
 
                 {/* Desc */}
-                <p className="-mt-[2em] me-[1.2em] ms-auto max-w-[38ch] border-e-[0.4em] border-e-primary pe-[0.4em] pt-[2em] text-right text-[11px] leading-tight sm:me-[1.4em] sm:text-[12px] md:me-[1.6em] md:max-w-[46ch] md:text-[12.5px] lg:me-[1.8em] lg:text-[13px] xl:me-[2em] xl:text-[13.5px] 2xl:me-[2em] 2xl:border-e-[0.6em] 2xl:text-[14px]">
+                <p className="relative -mt-[2em] me-[1.2em] ms-auto max-w-[38ch] border-e-[0.4em] border-e-primary pe-[0.4em] pt-[2em] text-right text-[11px] leading-tight sm:me-[1.4em] sm:text-[12px] md:me-[1.6em] md:max-w-[46ch] md:text-[12.5px] lg:me-[1.8em] lg:text-[13px] xl:me-[2em] xl:text-[13.5px] 2xl:me-[2em] 2xl:border-e-[0.6em] 2xl:text-[14px]">
+                  <span className="absolute bottom-[60%] right-[20%] text-[60px] font-bold leading-none text-black/20 sm:text-[78px] md:text-[96px] lg:text-[114px] xl:text-[132px] 2xl:text-[150px]">
+                    {id}
+                  </span>
                   <span className="font-bold">{emphasis}</span> {desc}
                 </p>
               </article>
