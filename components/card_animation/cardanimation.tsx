@@ -81,7 +81,7 @@ function cardanimation() {
     <div className='grid grid-cols-1 lg:grid-cols-2 container'>
         <div className='flex justify-start lg:justify-end '>
         <Image
-                className="aboutUs h-[400px]  lg:h-[400px] xl:h-[500px] 2xl:h-[750px] w-auto p-[30px] lg:p-[50px]"
+                className="aboutUs h-[350px]  lg:h-[470px] xl:h-[500px] 2xl:h-[750px] w-auto p-[30px] lg:p-[50px]"
                 src={Card01}
                 alt="product"
           />
