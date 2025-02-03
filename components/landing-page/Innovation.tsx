@@ -6,7 +6,7 @@ import "@/assets/styles/innovation.css";
 
 const Innovation = () => {
   return (
-    <div className="container mx-auto sm:p-[2rem] mt-[-1100px] sm:mt-[-1300px] md:mt-[-1200px] lg:mt-[-700px] xl:mt-[-400px] 2xl:mt-[-500px]">
+    <div className="container mx-auto sm:p-[2rem] mt-[200px] sm:mt-[300px] md:mt-[200px] lg:mt-[400px] xl:mt-[500px] 2xl:mt-[700px]">
       <div className="prograss relative w-[100%] bg-white">
         <div className="relative">
           <h1 className="relative mt-[-180px] overflow-hidden text-[100px] font-bold text-[#cccccc] sm:mt-[-230px] sm:text-[120px] md:mt-[-270px] md:text-[200px] lg:mt-[-450px] lg:text-[300px] xl:mt-[-550px] xl:text-[400px] 2xl:mt-[-700px] 2xl:text-[600px]">
@@ -34,7 +34,7 @@ const Innovation = () => {
             </div>
           </div>
 
-          <div className="innovation relative z-10 mt-[20px] h-[280px] w-full bg-[#eeeeee] sm:mt-[50px] sm:h-[290px] md:mt-[100px] md:h-[270px] lg:mt-[250px] lg:h-[250px] xl:mt-[300px] xl:h-[350px] 2xl:mt-[350px] 2xl:h-[350px]">
+          <div className="innovation  relative z-10 mt-[20px] h-[280px] w-full bg-[#eeeeee] sm:mt-[50px] sm:h-[290px] md:mt-[100px] md:h-[270px] lg:mt-[250px] lg:h-[250px] xl:mt-[300px] xl:h-[350px] 2xl:mt-[350px] 2xl:h-[350px]">
             <div className="absolute ml-[50%] h-[280px] w-[1px] overflow-hidden bg-black sm:h-[290px] md:h-[270px] md:w-[2px] lg:h-[250px] xl:h-[350px] 2xl:h-[350px]"></div>
             <div className="m-[10px] grid grid-cols-2 gap-[20px] sm:m-[20px] sm:gap-[150px] md:m-[30px] xl:m-[100px]">
               <div className="mt-[50px] h-[400px] w-full">

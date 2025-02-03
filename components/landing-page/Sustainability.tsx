@@ -5,7 +5,7 @@ import { TbPointFilled } from "react-icons/tb";
 const Sustainability = () => {
   return (
     <div className="container mx-auto sm:p-[2rem]">
-      <div className="m-[15px] h-[200vh] sm:m-0">
+      <div className="m-[15px]  sm:m-0">
         <div className="mb-4 grid sm:grid-cols-5">
           <div className="col-span-2">
             <p className="text-[50px] font-semibold sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[80px]">
