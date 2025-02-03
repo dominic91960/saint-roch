@@ -76,7 +76,7 @@
       transform: translateX(200px) translateY(-450px);
     }
     100% {
-      transform: translateX(calc(30vw)) translateY(200px);
+      transform: translateX(calc(27vw)) translateY(200px);
     }
   }
 }

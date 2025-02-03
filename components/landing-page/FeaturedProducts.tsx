@@ -83,7 +83,7 @@ const SwiperNavButtons = () => {
 
 const FeaturedProducts = () => {
   return (
-    <div>
+    <div className="overflow-hidden">
       <motion.div 
           variants={SlideLeft(0.5)}
           initial="hidden"
