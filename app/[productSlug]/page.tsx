@@ -6,6 +6,7 @@ import ProductImportance from "@/components/product-page/ProductImportance";
 import BoilerDesign from "@/components/product-page/BoilerDesign";
 import ProductDescription from "@/components/product-page/ProductDescription";
 import ProductCarousel from "@/components/product-page/ProductCarousel";
+import TechnicalData from "@/components/product-page/TechnicalData";
 
 import commodoreMainImg from "@/assets/images/product-page/commodore/main-img.png";
 import commodoreCardImageOne from "@/assets/images/product-page/commodore/card-img-one.png";
@@ -16,6 +17,7 @@ import commodoreSlideImgOne from "@/assets/images/product-page/commodore/slider-
 import commodoreSlideImgTwo from "@/assets/images/product-page/commodore/slider-image-two.png";
 import commodoreSlideImgThree from "@/assets/images/product-page/commodore/slider-image-three.png";
 import commodoreSlideImgFour from "@/assets/images/product-page/commodore/slider-image-four.png";
+import commodoreTechnicalData from "@/assets/images/product-page/commodore/technical-data.png";
 
 const data = [
   {
@@ -72,7 +74,48 @@ const data = [
         image: commodoreSlideImgFour,
         desc: "Operates with forced draught oil or gas burners",
       },
+      {
+        id: "slider005",
+        image: commodoreSlideImgOne,
+        desc: "SAINT ROCH Hypoeutectic grey cast iron",
+      },
+      {
+        id: "slider006",
+        image: commodoreSlideImgTwo,
+        desc: "6 model range from: 27 kw - 83 kw.",
+      },
+      {
+        id: "slider007",
+        image: commodoreSlideImgThree,
+        desc: "Efficiency: at 30% charge 90-91.1% at 100% charge 89.9-90.5%",
+      },
+      {
+        id: "slider008",
+        image: commodoreSlideImgFour,
+        desc: "Operates with forced draught oil or gas burners",
+      },
+      {
+        id: "slider009",
+        image: commodoreSlideImgOne,
+        desc: "SAINT ROCH Hypoeutectic grey cast iron",
+      },
+      {
+        id: "slider010",
+        image: commodoreSlideImgTwo,
+        desc: "6 model range from: 27 kw - 83 kw.",
+      },
+      {
+        id: "slider011",
+        image: commodoreSlideImgThree,
+        desc: "Efficiency: at 30% charge 90-91.1% at 100% charge 89.9-90.5%",
+      },
+      {
+        id: "slider012",
+        image: commodoreSlideImgFour,
+        desc: "Operates with forced draught oil or gas burners",
+      },
     ],
+    technicalData: commodoreTechnicalData,
   },
 ];
 
@@ -102,7 +145,8 @@ const ProductDetailsPage = async (props: { params: Params }) => {
         descTwo={product.prodDescTwo}
       />
       <ProductCarousel carouselData={product.carouselData} />
-      <div className="h-screen"></div>
+      <TechnicalData title={product.title} data={product.technicalData} />
+      <div className="h-[200px] bg-black"></div>
     </>
   );
 };
