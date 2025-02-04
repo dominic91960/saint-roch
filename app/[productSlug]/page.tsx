@@ -8,6 +8,7 @@ import commodoreMainImg from "@/assets/images/product-page/commodore/main-img.pn
 import commodoreCardImageOne from "@/assets/images/product-page/commodore/card-img-one.png";
 import commodoreCardImageTwo from "@/assets/images/product-page/commodore/card-img-two.png";
 import commodoreCardImageThree from "@/assets/images/product-page/commodore/card-img-three.png";
+import BoilerDesign from "@/components/product-page/BoilerDesign";
 
 const data = [
   {
@@ -58,6 +59,7 @@ const ProductDetailsPage = async (props: { params: Params }) => {
         secondDesc={product.secondDesc}
       />
       <ProductImportance title={product.title} cardData={product.cardData} />
+      <BoilerDesign />
     </>
   );
 };
