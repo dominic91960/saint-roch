@@ -5,12 +5,17 @@ import MainSection from "@/components/product-page/MainSection";
 import ProductImportance from "@/components/product-page/ProductImportance";
 import BoilerDesign from "@/components/product-page/BoilerDesign";
 import ProductDescription from "@/components/product-page/ProductDescription";
+import ProductCarousel from "@/components/product-page/ProductCarousel";
 
 import commodoreMainImg from "@/assets/images/product-page/commodore/main-img.png";
 import commodoreCardImageOne from "@/assets/images/product-page/commodore/card-img-one.png";
 import commodoreCardImageTwo from "@/assets/images/product-page/commodore/card-img-two.png";
 import commodoreCardImageThree from "@/assets/images/product-page/commodore/card-img-three.png";
 import commodoreProdDescImg from "@/assets/images/product-page/commodore/prod-desc-img.png";
+import commodoreSlideImgOne from "@/assets/images/product-page/commodore/slider-image-one.png";
+import commodoreSlideImgTwo from "@/assets/images/product-page/commodore/slider-image-two.png";
+import commodoreSlideImgThree from "@/assets/images/product-page/commodore/slider-image-three.png";
+import commodoreSlideImgFour from "@/assets/images/product-page/commodore/slider-image-four.png";
 
 const data = [
   {
@@ -46,6 +51,28 @@ const data = [
     prodDescImg: commodoreProdDescImg,
     prodDescTwo:
       "It is highly recommended to supply the package boiler+burner, as the SAINT ROCH burners are specifically adapted and tested for optimal operation with SAINT ROCH boilers.",
+    carouselData: [
+      {
+        id: "slider001",
+        image: commodoreSlideImgOne,
+        desc: "SAINT ROCH Hypoeutectic grey cast iron",
+      },
+      {
+        id: "slider002",
+        image: commodoreSlideImgTwo,
+        desc: "6 model range from: 27 kw - 83 kw.",
+      },
+      {
+        id: "slider003",
+        image: commodoreSlideImgThree,
+        desc: "Efficiency: at 30% charge 90-91.1% at 100% charge 89.9-90.5%",
+      },
+      {
+        id: "slider004",
+        image: commodoreSlideImgFour,
+        desc: "Operates with forced draught oil or gas burners",
+      },
+    ],
   },
 ];
 
@@ -74,6 +101,7 @@ const ProductDetailsPage = async (props: { params: Params }) => {
         prodImage={product.prodDescImg}
         descTwo={product.prodDescTwo}
       />
+      <ProductCarousel carouselData={product.carouselData} />
       <div className="h-screen"></div>
     </>
   );
