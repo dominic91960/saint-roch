@@ -12,7 +12,7 @@ interface ProductCarouselProps {
 const ProductCarousel: React.FC<ProductCarouselProps> = ({ carouselData }) => {
   return (
     <section className="section-padding container mx-auto text-[13px] sm:text-[14px] md:text-[15px] lg:text-[15.5px] xl:text-[16px] 2xl:text-[17px]">
-      {carouselData.map(({ id, image, desc }) => {
+      {carouselData.map(({ id }) => {
         return (
           <article
             key={id}
