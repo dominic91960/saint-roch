@@ -9,7 +9,7 @@ import { HiArrowLongRight } from "react-icons/hi2";
 // import bg from "@/assets/images/landing-page/hero/bg.png";
 import hero from "@/assets/images/landing-page/hero/hero.png";
 
-import { SlideLeft, SlideRight} from "@/lib/utils";
+import { SlideLeft, SlideRight } from "@/lib/utils";
 
 const Hero = () => {
   return (
@@ -18,27 +18,27 @@ const Hero = () => {
       // style={{ backgroundImage: `url(${bg.src})` }}
     >
       <div className="absolute inset-0 bg-gradient-to-r from-white/70 via-white/80 to-white/70 sm:bg-[linear-gradient(to_right,transparent,rgba(255,255,255,0.8),rgba(255,255,255,0.8),transparent)]"></div>
-      <div className="container relative z-[1] mx-auto px-[15px] text-center">
+      <div className="section-padding container relative z-[1] mx-auto text-center">
         {/* Title */}
-        <motion.div 
+        <motion.div
           variants={SlideLeft(0.5)}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
         >
-        <h1 className="title-text-stroke text-[50px] font-semibold leading-none sm:text-[80px] md:text-[80px] lg:text-[80px] xl:text-[95px] 2xl:text-[180px]">
-          Exceptional
-        </h1>
+          <h1 className="title-text-stroke text-[50px] font-semibold leading-none sm:text-[80px] md:text-[80px] lg:text-[80px] xl:text-[95px] 2xl:text-[180px]">
+            Exceptional
+          </h1>
         </motion.div>
-        <motion.div 
+        <motion.div
           variants={SlideRight(0.5)}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
         >
-        <h1 className="title-text-stroke text-[50px] font-semibold leading-none sm:text-[80px] md:text-[80px] lg:text-[80px] xl:text-[95px] 2xl:text-[180px]">
-        Quality
-        </h1>
+          <h1 className="title-text-stroke text-[50px] font-semibold leading-none sm:text-[80px] md:text-[80px] lg:text-[80px] xl:text-[95px] 2xl:text-[180px]">
+            Quality
+          </h1>
         </motion.div>
 
         {/* Image */}
@@ -52,7 +52,7 @@ const Hero = () => {
           </motion.div>
         </div>
         {/* Hero text */}
-        <p className="mx-auto max-w-[52ch] 2xl:max-w-[60ch] font-bold 2xl:mt-[30px]">
+        <p className="mx-auto max-w-[52ch] font-bold 2xl:mt-[30px] 2xl:max-w-[60ch]">
           Car engine png images, Automobile Engineering, Car Mechanical
           Engineering, Electrical Engineering.
         </p>

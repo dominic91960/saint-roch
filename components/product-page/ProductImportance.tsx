@@ -14,7 +14,7 @@ const ProductImportance: React.FC<ProductImportanceProps> = ({
 }) => {
   return (
     <section className="bg-[#EEEEEE] text-[12px] sm:text-[14px] md:text-[16px] lg:text-[20px] xl:text-[24px] 2xl:text-[26px]">
-      <div className="product-importance-grid container mx-auto px-[15px] py-[3em]">
+      <div className="product-importance-grid section-padding container mx-auto py-[3em]">
         <div className="title">
           <h1 className="text-right text-[32px] font-bold leading-none sm:text-[38px] md:text-[46px] lg:text-[54px] xl:text-[58px] 2xl:text-[64px]">
             The <br /> Importance of <br />

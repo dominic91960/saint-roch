@@ -5,7 +5,7 @@ import qCTwo from "@/assets/images/landing-page/qc-standards/qc-two.png";
 
 const QCStandards = () => {
   return (
-    <section className="container mx-auto mb-[3em] px-[15px] text-[12px] sm:text-[14px] md:text-[16px] lg:text-[20px] xl:text-[22px] 2xl:text-[24px]">
+    <section className="section-padding container mx-auto mb-[3em] text-[12px] sm:text-[14px] md:text-[16px] lg:text-[20px] xl:text-[22px] 2xl:text-[24px]">
       <h1 className="mb-[0.4em] text-right text-[46px] font-semibold leading-none sm:text-[70px] md:text-[94px] lg:text-[114px] xl:text-[125px] 2xl:text-[133px]">
         Quality & <br /> Compliance
         <span className="block text-[0.4em] text-primary">Standards</span>

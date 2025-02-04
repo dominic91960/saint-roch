@@ -9,7 +9,7 @@ const OriginCountry = () => {
     <section>
       {originData.map(({ madeIn, range }, i) => (
         <React.Fragment key={madeIn}>
-          <div className="container mx-auto px-[15px]">
+          <div className="section-padding container mx-auto">
             <div
               className={`${i === 0 ? "text-right" : ""} text-[54px] uppercase leading-[0.9em] sm:text-[88px] md:text-[122px] lg:text-[156px] xl:text-[180px] 2xl:text-[200px]`}
             >

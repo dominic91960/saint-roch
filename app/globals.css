@@ -77,6 +77,12 @@ body {
   }
 }
 
+@layer utilities {
+  .section-padding {
+    @apply px-[15px] sm:px-[20px] md:px-[30px] lg:px-[40px] xl:px-[45px] 2xl:px-[50px];
+  }
+}
+
 .title-text-stroke {
   font-family: "montserrat-stroke", Arial, Helvetica, sans-serif;
   color: transparent;

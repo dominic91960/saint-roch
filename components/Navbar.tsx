@@ -46,7 +46,7 @@ const Navbar = () => {
       className={`relative z-50 flex h-[60px] items-center bg-white ${inter.className} text-[16px] shadow-[0_0_5px_rgba(0,0,0,0.6)]`}
     >
       {/* Contains logo, desktop nav links and mobile toggle */}
-      <div className="container mx-auto flex items-center justify-between px-[15px]">
+      <div className="section-padding container mx-auto flex items-center justify-between 2xl:px-[50px]">
         {/* Logo */}
         {/* <div className="h-8"></div> */}
         <Link href="/" className="font-semibold">
@@ -79,7 +79,7 @@ const Navbar = () => {
       <div
         className={`mobile-nav ${isMobileNavOpen ? "" : "hidden"} fixed left-0 right-0 top-[60px] h-[calc(100dvh-60px)] w-full overflow-hidden bg-overlay backdrop-blur-sm`}
       >
-        <nav className="container mx-auto flex flex-col gap-[1em] px-[15px] pb-[2.5em] pt-[1em] font-medium">
+        <nav className="section-padding container mx-auto flex flex-col gap-[1em] pb-[2.5em] pt-[1em] font-medium">
           {navLinks.map(({ to, label }) => (
             <Link
               key={to}
