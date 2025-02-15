@@ -51,11 +51,6 @@ const Hero = () => {
             <Image src={hero} alt="Hero" className="object-contain" />
           </motion.div>
         </div>
-        {/* Hero text */}
-        <p className="mx-auto max-w-[52ch] font-bold 2xl:mt-[30px] 2xl:max-w-[60ch]">
-          Car engine png images, Automobile Engineering, Car Mechanical
-          Engineering, Electrical Engineering.
-        </p>
 
         {/* CTA */}
         <div className="mt-[1.8em] flex flex-col items-center justify-center gap-[1em] sm:flex-row">
