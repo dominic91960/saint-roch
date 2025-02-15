@@ -83,11 +83,6 @@ body {
   }
 }
 
-::selection {
-  color: white;
-  background-color: black;
-}
-
 .title-text-stroke {
   font-family: "montserrat-stroke", Arial, Helvetica, sans-serif;
   color: transparent;

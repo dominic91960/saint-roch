@@ -1,43 +1,39 @@
 import React from "react";
+import Image from "next/image";
+
+import flagOfItaly from "@/assets/images/landing-page/origin-country/italy.svg";
+import flagOfGermany from "@/assets/images/landing-page/origin-country/germany.svg";
 
 const originData = [
-  { madeIn: "Italy", range: "92kW to 203kW" },
-  { madeIn: "Germany", range: "92kW to 203kW" },
+  { flag: flagOfItaly, madeIn: "Italy", range: "92kW to 203kW" },
+  { flag: flagOfGermany, madeIn: "Germany", range: "92kW to 203kW" },
 ];
 const OriginCountry = () => {
   return (
     <section>
-      {originData.map(({ madeIn, range }, i) => (
+      {originData.map(({ flag, madeIn, range }, i) => (
         <React.Fragment key={madeIn}>
           <div className="section-padding container mx-auto">
-            <div
-              className={`${i === 0 ? "text-right" : ""} text-[54px] uppercase leading-[0.9em] sm:text-[88px] md:text-[122px] lg:text-[156px] xl:text-[180px] 2xl:text-[200px]`}
-            >
+            <div className="mb-[2em] grid grid-cols-10 gap-[0.4em] text-[54px] uppercase leading-[0.9em] sm:text-[88px] md:text-[122px] lg:text-[156px] xl:text-[180px] 2xl:text-[155px]">
+              {/* Flag of Italy */}
+              {i === 0 && (
+                <Image src={flag} alt={madeIn} className="col-span-4 w-full" />
+              )}
+
               {/* Made in */}
-              <h1 className="title-text-stroke">Made in</h1>
-
-              {/* Country and power rating */}
-              <div
-                className={`flex ${i === 0 ? "" : "flex-row-reverse"} flex-wrap-reverse items-baseline justify-end gap-[0.2em]`}
+              <h1
+                className={`${i === 1 ? "text-right" : ""} col-span-6 font-semibold`}
               >
-                <p className="-translate-y-[0.1em] text-[13px] font-semibold leading-none sm:text-[18px] md:text-[23px] lg:text-[30px] xl:text-[36px] 2xl:text-[40px]">
-                  {range}
-                </p>
-                <h1 className="title-text-stroke">{madeIn}</h1>
-              </div>
-            </div>
+                Made in <br /> {madeIn} <br />
+                <span className="block text-[0.4em]">{range}</span>
+              </h1>
 
-            <div
-              className={`flex items-center ${i === 0 ? "" : "justify-end"} gap-[0.2em] text-[30px] font-bold sm:text-[46px] md:text-[62px] lg:text-[80px] xl:text-[94px] 2xl:text-[102px]`}
-            >
-              <p className="bg-black px-[1em] py-[0.3em] text-[10px] text-white sm:text-[14px] md:text-[18px] lg:text-[24px] xl:text-[28px] 2xl:text-[30px]">
-                Exceptional quality
-              </p>
-              <p className="text-primary">Efficient</p>
+              {/* Flag of Germany */}
+              {i === 1 && (
+                <Image src={flag} alt={madeIn} className="col-span-4 w-full" />
+              )}
             </div>
           </div>
-
-          <div className="mb-[30px] h-[30px] bg-[#D9D9D9] sm:h-[40px] md:h-[55px] lg:h-[70px] xl:h-[85px] 2xl:h-[93px]"></div>
         </React.Fragment>
       ))}
     </section>
