@@ -11,6 +11,7 @@ import MainCategoryCarousel from "./MainCategoryCarousel";
 const categories = [
   {
     name: "Residential boilers",
+    wattage: "92kW to 203kW",
     slogan: "Effortless Warmth for Every Home",
     products: [
       {
@@ -37,6 +38,7 @@ const categories = [
   },
   {
     name: "Commercial boilers",
+    wattage: "102kW to 243kW",
     slogan: "Effortless Warmth for Every Home",
     products: [
       {
@@ -66,14 +68,14 @@ const categories = [
 const MainCategories = () => {
   return (
     <section className="container mx-auto px-[15px] text-[14px] sm:text-[17px] md:text-[20px] lg:text-[22px] xl:text-[24px] 2xl:text-[27px]">
-      {categories.map(({ name, slogan, products }) => (
+      {categories.map(({ name, wattage, slogan, products }) => (
         <React.Fragment key={name}>
           {/* Category name */}
           <h1 className="title-text-stroke inline-flex flex-col text-[48px] capitalize leading-[0.9em] sm:text-[76px] md:text-[104px] lg:text-[132px] xl:text-[160px] 2xl:text-[196px]">
             {name.split(" ")[0]} <br />
             {name.split(" ")[1]} <br />
             <span className="no-text-stroke ms-[0.3em] text-[0.3em] leading-[0.9em]">
-              92kW to 203kW
+              {wattage}
             </span>
           </h1>
 

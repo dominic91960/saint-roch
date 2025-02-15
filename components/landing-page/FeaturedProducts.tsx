@@ -148,7 +148,7 @@ const FeaturedProducts = () => {
                           disableOnInteraction: false,
                           pauseOnMouseEnter: false,
                         }}
-                        className="mySwiper -mt-[18%]"
+                        className="mySwiper -mt-[13%]"
                       >
                         {images.map((image, i) => (
                           <SwiperSlide key={i}>

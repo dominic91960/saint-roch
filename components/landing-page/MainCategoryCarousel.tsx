@@ -3,7 +3,7 @@ import React from "react";
 import Image, { StaticImageData } from "next/image";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper/modules";
+import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
@@ -16,7 +16,7 @@ const MainCategoryCarousel: React.FC<MainCategoryCarouselProps> = ({
 }) => {
   return (
     <Swiper
-      modules={[Autoplay, Pagination]}
+      modules={[Pagination]}
       pagination={{ clickable: true }}
       grabCursor
       speed={1000}
