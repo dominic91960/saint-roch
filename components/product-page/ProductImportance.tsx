@@ -1,6 +1,11 @@
+"use client";
+
 import React from "react";
 import Image, { StaticImageData } from "next/image";
 
+import { motion } from "framer-motion";
+
+import { SlideLeft, Grow } from "@/lib/utils";
 import "@/assets/styles/product-importance.css";
 
 interface ProductImportanceProps {
@@ -16,13 +21,25 @@ const ProductImportance: React.FC<ProductImportanceProps> = ({
     <section className="bg-[#EEEEEE] text-[12px] sm:text-[14px] md:text-[16px] lg:text-[20px] xl:text-[24px] 2xl:text-[26px]">
       <div className="product-importance-grid section-padding container mx-auto py-[3em]">
         <div className="title">
-          <h1 className="text-right text-[32px] font-bold leading-none sm:text-[38px] md:text-[46px] lg:text-[54px] xl:text-[58px] 2xl:text-[64px]">
+          <motion.h1
+            variants={SlideLeft(0.5)}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="text-right text-[32px] font-bold leading-none sm:text-[38px] md:text-[46px] lg:text-[54px] xl:text-[58px] 2xl:text-[64px]"
+          >
             The <br /> Importance of <br />
             <span className="text-primary">
               {title.toUpperCase()}
             </span> <br /> in Today&apos;s <br /> World
-          </h1>
-          <div className="ms-auto mt-[1.5em] h-[6em] w-[0.3em] bg-primary"></div>
+          </motion.h1>
+          <motion.div
+            variants={Grow(1)}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="ms-auto mt-[1.5em] h-[6em] w-[0.3em] bg-primary"
+          ></motion.div>
         </div>
         {cardData.map(({ id, cardImage, cardDesc }, i) => {
           const gridClass = ["card-one, card-two, card-three"];

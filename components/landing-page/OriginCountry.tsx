@@ -1,6 +1,11 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 
+import { motion } from "framer-motion";
+
+import { SlideLeft, SlideRight } from "@/lib/utils";
 import flagOfItaly from "@/assets/images/landing-page/origin-country/italy.svg";
 import flagOfGermany from "@/assets/images/landing-page/origin-country/germany.svg";
 
@@ -21,7 +26,13 @@ const OriginCountry = () => {
 
       {originData.map(({ flag, madeIn, range }, i) => (
         <React.Fragment key={madeIn}>
-          <div className="mb-[2em] grid grid-cols-10 items-center gap-[0.4em] uppercase leading-[0.9em]">
+          <motion.div
+            variants={i === 0 ? SlideRight(0.5) : SlideLeft(0.5)}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="mb-[2em] grid grid-cols-10 items-center gap-[0.4em] uppercase leading-[0.9em]"
+          >
             {/* Flag of Italy */}
             {i === 0 && (
               <Image src={flag} alt={madeIn} className="col-span-4 w-full" />
@@ -39,7 +50,7 @@ const OriginCountry = () => {
             {i === 1 && (
               <Image src={flag} alt={madeIn} className="col-span-4 w-full" />
             )}
-          </div>
+          </motion.div>
         </React.Fragment>
       ))}
     </section>

@@ -1,12 +1,16 @@
+"use client";
+
 import React from "react";
 
+import { motion } from "framer-motion";
 import { Button } from "../ui/button";
 import { RiFileListLine } from "react-icons/ri";
 import { FaSquare } from "react-icons/fa";
 import { HiArrowLongRight } from "react-icons/hi2";
 
-import boiler from "@/assets/images/landing-page/main-categories/boiler.png";
+import { SlideUp } from "@/lib/utils";
 import MainCategoryCarousel from "./MainCategoryCarousel";
+import boiler from "@/assets/images/landing-page/main-categories/boiler.png";
 
 const categories = [
   {
@@ -86,9 +90,13 @@ const MainCategories = () => {
 
           {/* Grid */}
           {products.map(({ id, boilerImages, boilerNames, desc }, i) => (
-            <div
+            <motion.div
               key={id}
               className="mb-[8em] mt-[4.5em] grid justify-items-center gap-[1.3em] lg:grid-cols-2 lg:items-center lg:gap-0"
+              variants={SlideUp(0.5)}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
             >
               {/* Image area */}
               <div className="relative w-[260px] text-[40px] sm:w-[310px] sm:text-[50px] md:w-[360px] md:text-[60px] lg:w-[420px] lg:text-[68px] xl:w-[481px] xl:text-[72px] 2xl:w-[530px] 2xl:text-[76px]">
@@ -140,7 +148,7 @@ const MainCategories = () => {
                   </Button>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </React.Fragment>
       ))}

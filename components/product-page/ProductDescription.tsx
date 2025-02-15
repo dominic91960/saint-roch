@@ -1,6 +1,11 @@
+"use client";
+
 import React from "react";
 import Image, { StaticImageData } from "next/image";
 
+import { motion } from "framer-motion";
+
+import { SlideLeft } from "@/lib/utils";
 import logo from "@/assets/images/product-page/logo.png";
 
 interface ProductDescriptionProps {
@@ -27,9 +32,15 @@ const ProductDescription: React.FC<ProductDescriptionProps> = ({
           />
         </div>
         <div>
-          <h1 className="text-right text-[42px] font-bold leading-none sm:text-[60px] md:text-[80px] lg:text-[100px] xl:text-[110px] 2xl:text-[120px]">
+          <motion.h1
+            variants={SlideLeft(0.5)}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="text-right text-[42px] font-bold leading-none sm:text-[60px] md:text-[80px] lg:text-[100px] xl:text-[110px] 2xl:text-[120px]"
+          >
             Saint Roch <br /> <span className="text-primary">Burners</span>
-          </h1>
+          </motion.h1>
           <p className="ms-auto mt-[2em] w-[20ch] text-right font-semibold">
             {descOne}
           </p>

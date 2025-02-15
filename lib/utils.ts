@@ -55,3 +55,19 @@ export const SlideRight = (delay: number = 3) => {
     },
   };
 };
+
+export const Grow = (delay: number = 3) => {
+  return {
+    hidden: {
+      scaleY: 0,
+    },
+    visible: {
+      scaleY: 1,
+      originY: "top",
+      transition: {
+        duration: 0.5,
+        delay: delay, // The delay passed in as a prop is used here
+      },
+    },
+  };
+};
