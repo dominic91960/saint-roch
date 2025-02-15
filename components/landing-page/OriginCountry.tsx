@@ -10,29 +10,35 @@ const originData = [
 ];
 const OriginCountry = () => {
   return (
-    <section>
+    <section className="section-padding container mx-auto text-[36px] sm:text-[65px] md:text-[75px] lg:text-[85px] xl:text-[125px] 2xl:text-[155px]">
+      <div className="mb-[1.4em] ms-auto w-fit text-right text-[0.8em] font-semibold leading-none">
+        <h2 className="">Saint Roch</h2>
+        <hr className="ms-auto mt-[0.1em] w-1/2 border-t-[0.15em] border-t-black text-[0.5em]" />
+        <h4 className="mt-[0.3em] text-[0.5em] text-primary">
+          Production Plants
+        </h4>
+      </div>
+
       {originData.map(({ flag, madeIn, range }, i) => (
         <React.Fragment key={madeIn}>
-          <div className="section-padding container mx-auto">
-            <div className="mb-[2em] grid grid-cols-10 gap-[0.4em] text-[54px] uppercase leading-[0.9em] sm:text-[88px] md:text-[122px] lg:text-[156px] xl:text-[180px] 2xl:text-[155px]">
-              {/* Flag of Italy */}
-              {i === 0 && (
-                <Image src={flag} alt={madeIn} className="col-span-4 w-full" />
-              )}
+          <div className="mb-[2em] grid grid-cols-10 items-center gap-[0.4em] uppercase leading-[0.9em]">
+            {/* Flag of Italy */}
+            {i === 0 && (
+              <Image src={flag} alt={madeIn} className="col-span-4 w-full" />
+            )}
 
-              {/* Made in */}
-              <h1
-                className={`${i === 1 ? "text-right" : ""} col-span-6 font-semibold`}
-              >
-                Made in <br /> {madeIn} <br />
-                <span className="block text-[0.4em]">{range}</span>
-              </h1>
+            {/* Made in */}
+            <h1
+              className={`${i === 1 ? "text-right" : ""} col-span-6 font-semibold`}
+            >
+              Made in <br /> {madeIn} <br />
+              <span className="block text-[0.4em]">{range}</span>
+            </h1>
 
-              {/* Flag of Germany */}
-              {i === 1 && (
-                <Image src={flag} alt={madeIn} className="col-span-4 w-full" />
-              )}
-            </div>
+            {/* Flag of Germany */}
+            {i === 1 && (
+              <Image src={flag} alt={madeIn} className="col-span-4 w-full" />
+            )}
           </div>
         </React.Fragment>
       ))}

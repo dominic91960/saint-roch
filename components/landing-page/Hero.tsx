@@ -26,7 +26,7 @@ const Hero = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <h1 className="title-text-stroke text-[50px] font-semibold leading-none sm:text-[80px] md:text-[80px] lg:text-[80px] xl:text-[95px] 2xl:text-[180px]">
+          <h1 className="title-text-stroke text-[50px] leading-none sm:text-[80px] md:text-[80px] lg:text-[80px] xl:text-[95px] 2xl:text-[180px]">
             Exceptional
           </h1>
         </motion.div>
@@ -36,7 +36,7 @@ const Hero = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <h1 className="title-text-stroke text-[50px] font-semibold leading-none sm:text-[80px] md:text-[80px] lg:text-[80px] xl:text-[95px] 2xl:text-[180px]">
+          <h1 className="title-text-stroke text-[50px] leading-none sm:text-[80px] md:text-[80px] lg:text-[80px] xl:text-[95px] 2xl:text-[180px]">
             Quality
           </h1>
         </motion.div>
