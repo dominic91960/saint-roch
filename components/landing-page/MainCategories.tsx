@@ -67,6 +67,33 @@ const categories = [
       },
     ],
   },
+  {
+    name: "Industrial boilers",
+    wattage: "102kW to 243kW",
+    slogan: "Effortless Warmth for Every Home",
+    products: [
+      {
+        id: "prod2.1",
+        boilerImages: [
+          { id: "image2.1.1", image: boiler, alt: "Boiler" },
+          { id: "image2.1.2", image: boiler, alt: "Boiler" },
+          { id: "image2.1.3", image: boiler, alt: "Boiler" },
+        ],
+        desc: "When users hover over the main categories, the subcategories should appear along with their respective category images.",
+        boilerNames: ["Optimajor", "Commodore"],
+      },
+      {
+        id: "prod2.2",
+        boilerImages: [
+          { id: "image2.2.1", image: boiler, alt: "Boiler" },
+          { id: "image2.2.2", image: boiler, alt: "Boiler" },
+          { id: "image2.2.3", image: boiler, alt: "Boiler" },
+        ],
+        desc: "When users hover over the main categories, the subcategories should appear along with their respective category images.",
+        boilerNames: ["Optimajor", "Commodore"],
+      },
+    ],
+  },
 ];
 
 const MainCategories = () => {
@@ -75,10 +102,10 @@ const MainCategories = () => {
       {categories.map(({ name, wattage, slogan, products }) => (
         <React.Fragment key={name}>
           {/* Category name */}
-          <h1 className="title-text-stroke inline-flex flex-col text-[48px] capitalize leading-[0.9em] sm:text-[76px] md:text-[104px] lg:text-[132px] xl:text-[160px] 2xl:text-[196px]">
+          <h1 className="title-text-stroke relative inline-flex w-full flex-col text-[48px] capitalize leading-[0.9em] sm:text-[76px] md:text-[104px] lg:text-[132px] xl:text-[160px] 2xl:text-[196px]">
             {name.split(" ")[0]} <br />
             {name.split(" ")[1]} <br />
-            <span className="no-text-stroke ms-[0.3em] text-[0.3em] leading-[0.9em]">
+            <span className="no-text-stroke absolute bottom-0 right-0 ms-[0.3em] h-fit -translate-y-[10%] text-[0.3em] leading-[0.9em]">
               {wattage}
             </span>
           </h1>
@@ -99,9 +126,11 @@ const MainCategories = () => {
               viewport={{ once: true }}
             >
               {/* Image area */}
-              <div className="relative w-[260px] text-[40px] sm:w-[310px] sm:text-[50px] md:w-[360px] md:text-[60px] lg:w-[420px] lg:text-[68px] xl:w-[481px] xl:text-[72px] 2xl:w-[530px] 2xl:text-[76px]">
+              <div className="relative w-[260px] pt-[0.7em] text-[40px] sm:w-[310px] sm:text-[50px] md:w-[360px] md:text-[60px] lg:w-[420px] lg:text-[68px] xl:w-[481px] xl:text-[72px] 2xl:w-[530px] 2xl:text-[76px]">
                 <MainCategoryCarousel images={boilerImages} />
-                <h2 className="title-text-stroke absolute -top-[6%] left-0 uppercase leading-none">
+                <h2
+                  className={`light-text-stroke absolute left-0 top-0 uppercase leading-none ${boilerNames[i] === "Optimajor" || boilerNames[i] === "Commodore" ? "top-[3%] text-[1em]" : "text-[1.75em]"}`}
+                >
                   {boilerNames[i]}
                 </h2>
               </div>

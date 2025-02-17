@@ -92,6 +92,15 @@ body {
   text-stroke: 1px black;
 }
 
+.light-text-stroke {
+  font-family: "montserrat-stroke", Arial, Helvetica, sans-serif;
+  color: transparent;
+  -webkit-text-stroke: 1px black;
+  -moz-text-stroke: 1px black;
+  -ms-text-stroke: 1px black;
+  text-stroke: 1px black;
+}
+
 .no-text-stroke {
   color: black;
   -webkit-text-stroke: 0;
@@ -102,6 +111,13 @@ body {
 
 @media (min-width: 768px) {
   .title-text-stroke {
+    -webkit-text-stroke: 1.5px black;
+    -moz-text-stroke: 1.5px black;
+    -ms-text-stroke: 1.5px black;
+    text-stroke: 1.5px black;
+  }
+
+  .light-text-stroke {
     -webkit-text-stroke: 1.5px black;
     -moz-text-stroke: 1.5px black;
     -ms-text-stroke: 1.5px black;

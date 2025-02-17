@@ -1,10 +1,12 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import { Inter } from "next/font/google";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 
+import logo from "@/assets/images/logo.png";
 import "@/assets/styles/navbar.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -49,8 +51,12 @@ const Navbar = () => {
       <div className="section-padding container mx-auto flex items-center justify-between 2xl:px-[50px]">
         {/* Logo */}
         {/* <div className="h-8"></div> */}
-        <Link href="/" className="font-semibold">
-          LOGO
+        <Link href="/" className="flex items-center justify-center">
+          <Image
+            src={logo}
+            alt="Logo of saint roch"
+            className="h-[50px] object-contain"
+          />
         </Link>
 
         {/* Desktop nav links */}
