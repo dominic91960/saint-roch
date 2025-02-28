@@ -8,7 +8,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 interface MainCategoryCarouselProps {
-  images: { id: string; image: StaticImageData; alt: string }[];
+  images: { id: string; title: string; image: StaticImageData; alt: string }[];
 }
 
 const MainCategoryCarousel: React.FC<MainCategoryCarouselProps> = ({
@@ -26,14 +26,19 @@ const MainCategoryCarousel: React.FC<MainCategoryCarouselProps> = ({
       autoplay={{ pauseOnMouseEnter: true }}
       className="mySwiper"
     >
-      {images.map(({ id, image, alt }) => (
+      {images.map(({ id, title, image, alt }) => (
         <SwiperSlide key={id}>
-          <div className="flex items-center justify-center pb-[50px]">
+          <div className="relative flex items-center justify-center pb-[50px] pt-[0.7em]">
             <Image
               src={image}
               alt={alt}
               className="relative z-[1] w-full object-contain"
             />
+            <h2
+              className={`light-text-stroke absolute left-0 uppercase leading-none ${title === "Optimajor" || title === "Commodore" ? "top-[4%] text-[0.94em]" : "top-0 text-[1.75em]"}`}
+            >
+              {title}
+            </h2>
           </div>
         </SwiperSlide>
       ))}
