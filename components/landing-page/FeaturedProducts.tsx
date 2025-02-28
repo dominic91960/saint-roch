@@ -129,7 +129,6 @@ const FeaturedProducts = () => {
                     </h2>
 
                     {/* Image with number*/}
-
                     <Swiper
                       modules={[Autoplay, EffectCreative, Navigation]}
                       grabCursor
