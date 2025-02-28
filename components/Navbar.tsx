@@ -3,22 +3,40 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { Inter } from "next/font/google";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
+
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 import logo from "@/assets/images/logo.png";
 import "@/assets/styles/navbar.css";
 
 const inter = Inter({ subsets: ["latin"] });
 const navLinks = [
-  { to: "/", label: "Home" },
-  { to: "/commodore", label: "Products" },
-  { to: "/about", label: "About Us" },
-  { to: "/contact", label: "Contact Us" },
+  { mainLink: null, links: [{ to: "/", label: "Home" }] },
+  {
+    mainLink: "Products",
+    links: [
+      { to: "/combi", label: "Combi" },
+      { to: "/ultra", label: "Ultra" },
+      { to: "/optimajor", label: "Optimajor" },
+      { to: "/commodore", label: "Commodore" },
+    ],
+  },
+  { mainLink: null, links: [{ to: "/about", label: "About Us" }] },
+  { mainLink: null, links: [{ to: "/contact", label: "Contact Us" }] },
 ];
 
 const Navbar = () => {
   const path = usePathname();
+  const router = useRouter();
+
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
   console.log(path);
 
@@ -42,6 +60,9 @@ const Navbar = () => {
       return activeClasses;
     else return inactiveClasses;
   };
+  const pushRoute = (to: string) => {
+    router.push(to);
+  };
 
   return (
     <section
@@ -50,26 +71,47 @@ const Navbar = () => {
       {/* Contains logo, desktop nav links and mobile toggle */}
       <div className="section-padding container mx-auto flex items-center justify-between 2xl:px-[50px]">
         {/* Logo */}
-        {/* <div className="h-8"></div> */}
-        <Link href="/" className="flex items-center justify-center">
+        <Link href="/" className="flex items-center justify-start">
           <Image
             src={logo}
             alt="Logo of saint roch"
-            className="h-[50px] object-contain"
+            className="h-[50px] w-fit object-contain"
           />
         </Link>
 
         {/* Desktop nav links */}
-        <nav className="hidden space-x-[3em] font-medium md:block">
-          {navLinks.map(({ to, label }) => (
-            <Link
-              key={to}
-              href={to}
-              className={`${getColor(to)} hover:text-primary`}
-            >
-              {label}
-            </Link>
-          ))}
+        <nav className="hidden gap-[3em] font-medium md:flex md:items-center">
+          {navLinks.map(({ mainLink, links }) => {
+            if (!mainLink)
+              return (
+                <Link
+                  key={links[0].label}
+                  href={links[0].to}
+                  className={`${getColor(links[0].to)} hover:text-primary`}
+                >
+                  {links[0].label}
+                </Link>
+              );
+
+            return (
+              <Select key={mainLink} onValueChange={pushRoute}>
+                <SelectTrigger>
+                  <SelectValue placeholder={mainLink} />
+                </SelectTrigger>
+                <SelectContent align="center">
+                  {links.map(({ to, label }) => (
+                    <SelectItem
+                      key={label}
+                      value={to}
+                      className={`${getColor(to)} cursor-pointer hover:text-primary`}
+                    >
+                      {label}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            );
+          })}
         </nav>
 
         {/* Mobile toggle */}
@@ -86,15 +128,27 @@ const Navbar = () => {
         className={`mobile-nav ${isMobileNavOpen ? "" : "hidden"} fixed left-0 right-0 top-[60px] h-[calc(100dvh-60px)] w-full overflow-hidden bg-overlay backdrop-blur-sm`}
       >
         <nav className="section-padding container mx-auto flex flex-col gap-[1em] pb-[2.5em] pt-[1em] font-medium">
-          {navLinks.map(({ to, label }) => (
-            <Link
-              key={to}
-              href={to}
-              className={`w-full border-b py-[0.5em] ${getColor(to)} hover:text-primary`}
-            >
-              {label}
-            </Link>
-          ))}
+          {navLinks.map(({ mainLink, links }) => {
+            if (!mainLink)
+              return (
+                <Link
+                  key={links[0].label}
+                  href={links[0].to}
+                  className={`w-full border-b py-[0.5em] ${getColor(links[0].to)} hover:text-primary`}
+                >
+                  {links[0].label}
+                </Link>
+              );
+
+            return (
+              <p
+                key={links[0].label}
+                className={`w-full border-b py-[0.5em] ${getColor(links[0].to)} hover:text-primary`}
+              >
+                {mainLink}
+              </p>
+            );
+          })}
         </nav>
       </div>
     </section>
