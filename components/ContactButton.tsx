@@ -10,7 +10,7 @@ import { BsTelephone } from "react-icons/bs";
 import { FaWhatsapp } from "react-icons/fa";
 
 const ContactButton = () => {
-  const [contactInfoVisible, setContactInfoVisible] = useState(true);
+  const [contactInfoVisible, setContactInfoVisible] = useState(false);
   const toggleVisibility = () => setContactInfoVisible((prev) => !prev);
 
   return (

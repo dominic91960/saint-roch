@@ -10,12 +10,13 @@ import OriginCountry from "@/components/landing-page/OriginCountry";
 import ContactButton from "@/components/ContactButton";
 import QCStandards from "@/components/landing-page/QCStandards";
 import Certifications from "@/components/landing-page/Certifications";
+import Footer from "@/components/footer/Footer";
 
 import Innoimgae from "@/assets/images/landing-page/innovation/product.png";
 
 export default function Home() {
   return (
-    <div className="">
+    <div className="overflow-x-hidden overflow-y-visible">
       <Navbar />
       <Hero />
       <FeaturedProducts />
@@ -34,7 +35,7 @@ export default function Home() {
       <QCStandards />
       <Certifications />
       <ContactButton />
-      <div className="h-40 bg-black"></div>
+      <Footer />
     </div>
   );
 }
