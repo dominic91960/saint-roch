@@ -50,7 +50,9 @@ const Navbar = () => {
     return () => window.removeEventListener("resize", closeMobileNav);
   }, []);
 
-  const toggleMobileNav = () => setIsMobileNavOpen((prev) => !prev);
+  const toggleMobileNav = () => {
+    setIsMobileNavOpen((prev) => !prev);
+  };
   const getColor = (currentPath: string) => {
     const activeClasses = "text-primary border-b-primary";
     const inactiveClasses = "text-black border-b-black/30";
@@ -66,7 +68,7 @@ const Navbar = () => {
 
   return (
     <section
-      className={`relative z-50 flex h-[60px] items-center bg-white ${inter.className} text-[16px] shadow-[0_0_5px_rgba(0,0,0,0.6)]`}
+      className={`left-0 right-0 top-0 z-50 flex h-[60px] items-center bg-white ${inter.className} text-[16px] shadow-[0_0_5px_rgba(0,0,0,0.6)] ${isMobileNavOpen ? "fixed" : "absolute"}`}
     >
       {/* Contains logo, desktop nav links and mobile toggle */}
       <div className="section-padding container mx-auto flex items-center justify-between 2xl:px-[50px]">
@@ -95,7 +97,7 @@ const Navbar = () => {
 
             return (
               <Select key={mainLink} onValueChange={pushRoute}>
-                <SelectTrigger>
+                <SelectTrigger className="hover:text-primary">
                   <SelectValue placeholder={mainLink} />
                 </SelectTrigger>
                 <SelectContent align="center">
@@ -125,7 +127,7 @@ const Navbar = () => {
 
       {/* Mobile nav */}
       <div
-        className={`mobile-nav ${isMobileNavOpen ? "" : "hidden"} fixed left-0 right-0 top-[60px] h-[calc(100dvh-60px)] w-full overflow-hidden bg-overlay backdrop-blur-sm`}
+        className={`mobile-nav ${isMobileNavOpen ? "" : "hidden"} fixed left-0 right-0 top-[60px] h-[calc(100dvh-60px)] w-full overflow-hidden bg-white/80 backdrop-blur-sm`}
       >
         <nav className="section-padding container mx-auto flex flex-col gap-[1em] pb-[2.5em] pt-[1em] font-medium">
           {navLinks.map(({ mainLink, links }) => {
@@ -141,12 +143,22 @@ const Navbar = () => {
               );
 
             return (
-              <p
-                key={links[0].label}
-                className={`w-full border-b py-[0.5em] ${getColor(links[0].to)} hover:text-primary`}
-              >
-                {mainLink}
-              </p>
+              <Select key={mainLink} onValueChange={pushRoute}>
+                <SelectTrigger className="w-full border-b border-b-black/30 py-[0.5em] hover:text-primary">
+                  <SelectValue placeholder={mainLink} />
+                </SelectTrigger>
+                <SelectContent align="center" className="rounded-none">
+                  {links.map(({ to, label }) => (
+                    <SelectItem
+                      key={label}
+                      value={to}
+                      className={`${getColor(to)} cursor-pointer rounded-none hover:text-primary`}
+                    >
+                      {label}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
             );
           })}
         </nav>

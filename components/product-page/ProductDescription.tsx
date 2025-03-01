@@ -21,7 +21,7 @@ const ProductDescription: React.FC<ProductDescriptionProps> = ({
   descTwo,
 }) => {
   return (
-    <section className="section-padding container mx-auto text-[14px] sm:text-[20px] md:text-[26px] lg:text-[32px] xl:text-[36px] 2xl:px-[4em] 2xl:text-[38px]">
+    <section className="section-padding container mx-auto overflow-hidden text-[14px] sm:text-[20px] md:text-[26px] lg:text-[32px] xl:text-[36px] 2xl:px-[4em] 2xl:text-[38px]">
       {/* Division with logo and descOne */}
       <div className="flex flex-col gap-[2em] sm:flex-row sm:justify-between">
         <div className="w-[185px] sm:w-[250px] md:w-[325px] lg:w-[400px] xl:w-[466px] 2xl:w-[520px]">

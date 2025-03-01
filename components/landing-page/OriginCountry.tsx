@@ -15,7 +15,7 @@ const originData = [
 ];
 const OriginCountry = () => {
   return (
-    <section className="section-padding container mx-auto text-[36px] sm:text-[65px] md:text-[75px] lg:text-[85px] xl:text-[125px] 2xl:text-[155px]">
+    <section className="section-padding container mx-auto overflow-hidden text-[36px] sm:text-[65px] md:text-[75px] lg:text-[85px] xl:text-[125px] 2xl:text-[155px]">
       <div className="mb-[1.4em] ms-auto w-fit text-right text-[0.8em] font-semibold leading-none">
         <h2 className="">Saint Roch</h2>
         <hr className="ms-auto mt-[0.1em] w-1/2 border-t-[0.15em] border-t-black text-[0.5em]" />

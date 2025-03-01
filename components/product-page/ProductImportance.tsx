@@ -18,7 +18,7 @@ const ProductImportance: React.FC<ProductImportanceProps> = ({
   cardData,
 }) => {
   return (
-    <section className="bg-[#EEEEEE] text-[12px] sm:text-[14px] md:text-[16px] lg:text-[20px] xl:text-[24px] 2xl:text-[26px]">
+    <section className="overflow-hidden bg-[#EEEEEE] text-[12px] sm:text-[14px] md:text-[16px] lg:text-[20px] xl:text-[24px] 2xl:text-[26px]">
       <div className="product-importance-grid section-padding container mx-auto py-[3em]">
         <div className="title">
           <motion.h1

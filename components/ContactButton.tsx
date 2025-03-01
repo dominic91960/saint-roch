@@ -16,7 +16,7 @@ const ContactButton = () => {
   return (
     <>
       <div
-        className={`fixed bottom-[5%] right-0 z-40 flex flex-col gap-[1em] font-semibold ${contactInfoVisible ? "rounded-s-md p-[1em] shadow-[-2px_2px_5px_rgba(0,0,0,0.3)]" : "rounded-s-full"}`}
+        className={`fixed bottom-[5%] right-0 z-40 flex flex-col gap-[1em] font-semibold ${contactInfoVisible ? "rounded-s-md bg-white p-[1em] shadow-[-2px_2px_5px_rgba(0,0,0,0.3)]" : "rounded-s-full"}`}
       >
         <button
           className={`flex items-center gap-[0.5em] font-semibold ${contactInfoVisible ? "bg-transparent p-0 shadow-none" : "rounded-s-full bg-white p-[0.3em] pe-[2.2em] shadow-[-2px_2px_5px_rgba(0,0,0,0.3)]"} group`}

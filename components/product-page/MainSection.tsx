@@ -24,7 +24,7 @@ const MainSection: React.FC<MainSectionProps> = ({
   secondDesc,
 }) => {
   return (
-    <section className="relative text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[19px] 2xl:text-[22px]">
+    <section className="relative mt-[60px] text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[19px] 2xl:text-[22px]">
       <div className="absolute left-0 top-0 -z-[1] h-[21em] w-4/5 rounded-ee-[0.5em] bg-[#F2F2F2] sm:h-[24em] sm:w-[70%] md:h-[27em] lg:h-[29em] xl:h-[30em] xl:w-1/2"></div>
       <div className="section-padding container relative mx-auto">
         <h2 className="pt-[2em] text-[18px] font-bold sm:text-[22px] md:text-[26px] lg:text-[30px] xl:text-[33px] 2xl:text-[35px]">
@@ -55,6 +55,7 @@ const MainSection: React.FC<MainSectionProps> = ({
             src={image}
             alt={title}
             className="absolute bottom-0 left-1/2 w-[185px] -translate-x-[25%] translate-y-[53%] object-contain sm:w-[250px] md:w-[350px] lg:w-[435px] xl:w-[523px] xl:-translate-x-[50%] xl:translate-y-[56%] 2xl:w-[600px]"
+            priority
           />
         </motion.div>
       </div>

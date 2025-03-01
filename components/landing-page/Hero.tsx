@@ -14,7 +14,7 @@ import { SlideLeft, SlideRight } from "@/lib/utils";
 const Hero = () => {
   return (
     <section
-      className="relative flex min-h-[calc(100dvh-60px)] items-center bg-cover bg-bottom pb-[1em] pt-[2em] text-[12px] sm:pb-[3.25em] sm:text-[13px] md:pb-[3.5em] md:text-[14px] lg:pb-[3.75em] lg:text-[15px] xl:pb-[4em] xl:text-[16px] 2xl:pb-[4em] 2xl:text-[16px]"
+      className="relative flex min-h-dvh items-center bg-cover bg-bottom pb-[1em] pt-[2em] text-[12px] sm:pb-[3.25em] sm:text-[13px] md:pb-[3.5em] md:text-[14px] lg:pb-[3.75em] lg:text-[15px] xl:pb-[4em] xl:text-[16px] 2xl:pb-[4em] 2xl:text-[16px]"
       // style={{ backgroundImage: `url(${bg.src})` }}
     >
       <div className="absolute inset-0 bg-gradient-to-r from-white/70 via-white/80 to-white/70 sm:bg-[linear-gradient(to_right,transparent,rgba(255,255,255,0.8),rgba(255,255,255,0.8),transparent)]"></div>
@@ -48,7 +48,7 @@ const Hero = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ type: "spring", stiffness: 100, delay: 0.3 }}
           >
-            <Image src={hero} alt="Hero" className="object-contain" />
+            <Image src={hero} alt="Hero" className="object-contain" priority />
           </motion.div>
         </div>
 

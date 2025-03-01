@@ -16,7 +16,7 @@ import Innoimgae from "@/assets/images/landing-page/innovation/product.png";
 
 export default function Home() {
   return (
-    <div className="overflow-x-hidden overflow-y-visible">
+    <>
       <Navbar />
       <Hero />
       <FeaturedProducts />
@@ -36,6 +36,6 @@ export default function Home() {
       <Certifications />
       <ContactButton />
       <Footer />
-    </div>
+    </>
   );
 }
