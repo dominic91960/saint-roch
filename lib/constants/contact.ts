@@ -39,6 +39,7 @@ export const otherLocations = [
     address: "78 Digital Hub, Galle Road,\nColomba, Sri Lanka",
     tel: ["+94 11 765 4321", "+94 76 987 654"],
     whatsapp: "+94 76 987 6543",
+    whatsappLink: "https://wa.me/94769876543",
     email: "support@nexussolutions.com",
   },
   {
@@ -47,6 +48,7 @@ export const otherLocations = [
     address: "78 Digital Hub, Galle Road,\nColombe, Sri Lanka",
     tel: ["+94 11 765 4321", "+94 76 987 654"],
     whatsapp: "+94 76 987 6543",
+    whatsappLink: "https://wa.me/94769876543",
     email: "support@nexussolutions.com",
   },
   {
@@ -55,6 +57,7 @@ export const otherLocations = [
     address: "78 Digital Hub, Galle Road,\nColombi, Sri Lanka",
     tel: ["+94 11 765 4321", "+94 76 987 654"],
     whatsapp: "+94 76 987 6543",
+    whatsappLink: "https://wa.me/94769876543",
     email: "support@nexussolutions.com",
   },
   {
@@ -63,6 +66,7 @@ export const otherLocations = [
     address: "78 Digital Hub, Galle Road,\nColombo, Sri Lanka",
     tel: ["+94 11 765 4321", "+94 76 987 654"],
     whatsapp: "+94 76 987 6543",
+    whatsappLink: "https://wa.me/94769876543",
     email: "support@nexussolutions.com",
   },
 ];

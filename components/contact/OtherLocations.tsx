@@ -1,7 +1,10 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+import { motion } from "framer-motion";
 import { LuMapPinned } from "react-icons/lu";
 import { IoCallOutline } from "react-icons/io5";
 import { FaWhatsapp } from "react-icons/fa";
@@ -13,9 +16,15 @@ import locationIcon from "@/assets/images/contact/location-icon.png";
 
 const OtherLocations = () => {
   return (
-    <div className="grid gap-[2em] text-[14px] sm:grid-cols-2 sm:gap-x-0 lg:grid-cols-3 xl:flex xl:justify-between">
+    <motion.div
+      variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
+      initial="hidden"
+      whileInView="visible"
+      transition={{ staggerChildren: 0.08 }}
+      className="grid gap-[2em] text-[14px] sm:grid-cols-2 sm:gap-x-0 lg:grid-cols-3 xl:flex xl:justify-between"
+    >
       {otherLocations.map(
-        ({ country, name, address, tel, whatsapp, email }, i) => {
+        ({ country, name, address, tel, whatsapp, whatsappLink, email }, i) => {
           const lastItem = i + 1 === otherLocations.length;
           const evenItem = i % 2 === 0;
           const secondItem = i === 1;
@@ -23,7 +32,11 @@ const OtherLocations = () => {
 
           return (
             <React.Fragment key={address}>
-              <div
+              <motion.div
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  visible: { opacity: 1, y: 0 },
+                }}
                 className={`flex ${!lastItem ? "border-b border-b-black sm:border-b-0" : ""} ${
                   evenItem
                     ? "sm:border-r sm:border-r-black"
@@ -70,7 +83,13 @@ const OtherLocations = () => {
 
                   <div className="mb-[1em] flex items-start gap-[0.5em] font-semibold">
                     <FaWhatsapp className="shrink-0 text-[1.4em]" />
-                    <p>{whatsapp}</p>
+                    <Link
+                      href={whatsappLink}
+                      target="_blank"
+                      className="hover:text-primary"
+                    >
+                      {whatsapp}
+                    </Link>
                   </div>
 
                   <div className="mb-[1em] flex items-start gap-[0.5em] font-semibold">
@@ -83,15 +102,21 @@ const OtherLocations = () => {
                     </Link>
                   </div>
                 </article>
-              </div>
+              </motion.div>
               {!lastItem && (
-                <div className="hidden h-[20em] w-px bg-black xl:block"></div>
+                <motion.div
+                  variants={{
+                    hidden: { opacity: 0, y: -20 },
+                    visible: { opacity: 1, y: 0 },
+                  }}
+                  className="hidden h-[20em] w-px bg-black xl:block"
+                ></motion.div>
               )}
             </React.Fragment>
           );
         },
       )}
-    </div>
+    </motion.div>
   );
 };
 

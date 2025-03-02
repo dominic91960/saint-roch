@@ -1,10 +1,14 @@
+"use client";
 import React from "react";
 import Image from "next/image";
+
+import { motion } from "framer-motion";
 
 import Navbar from "@/components/Navbar";
 import ContactForm from "@/components/contact/ContactForm";
 import Footer from "@/components/footer/Footer";
 
+import { SlideRight, SlideUp } from "@/lib/utils";
 import formImg from "@/assets/images/contact/contact-form-img.png";
 import ContactDetails from "@/components/contact/ContactDetails";
 import OtherLocations from "@/components/contact/OtherLocations";
@@ -21,15 +25,26 @@ const ContactPage = () => {
 
           <div className="section-padding container relative mx-auto">
             {/* Title */}
-            <p className="text-[14px] font-semibold text-primary sm:text-[17px] md:text-[20px] lg:text-[26px] xl:text-[32px] 2xl:text-[38px]">
-              We&apos;re here to help
-            </p>
-            <h1 className="title-text-stroke text-[44px] uppercase sm:mb-[0.4em] sm:text-[56px] md:text-[68px] lg:text-[86px] xl:text-[104px] 2xl:text-[122px]">
-              Let&apos;s talk
-            </h1>
+            <motion.div
+              variants={SlideRight(0)}
+              initial="hidden"
+              animate="visible"
+            >
+              <p className="text-[14px] font-semibold text-primary sm:text-[17px] md:text-[20px] lg:text-[26px] xl:text-[32px] 2xl:text-[38px]">
+                We&apos;re here to help
+              </p>
+              <h1 className="title-text-stroke text-[44px] uppercase sm:mb-[0.4em] sm:text-[56px] md:text-[68px] lg:text-[86px] xl:text-[104px] 2xl:text-[122px]">
+                Let&apos;s talk
+              </h1>
+            </motion.div>
 
             {/* Form grid */}
-            <div className="grid gap-[2em] pb-[6em] sm:grid-cols-11">
+            <motion.div
+              variants={SlideUp(1)}
+              initial="hidden"
+              animate="visible"
+              className="grid gap-[2em] pb-[6em] sm:grid-cols-11"
+            >
               <div className="sm:col-span-6 lg:col-span-5">
                 <p className="my-[1em] text-justify font-semibold sm:mb-[2em] sm:mt-0 sm:text-left">
                   Enim tempor eget pharetra facilisis sed maecenas adipiscing.
@@ -50,7 +65,7 @@ const ContactPage = () => {
                   className="size-full rounded-[0.5em] object-cover object-center lg:h-[96%] lg:w-[80%] lg:translate-y-[8%] xl:h-full xl:w-[90%] xl:translate-y-[5%]"
                 />
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
 
