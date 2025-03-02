@@ -35,14 +35,14 @@ const ContactForm = () => {
 
   return (
     <form
-      className="flex flex-col gap-[1em]"
+      className="flex flex-col gap-[1.5em]"
       onSubmit={handleSubmit(onFormSubmit)}
     >
       {/* Name */}
       <div>
         <input
           type="text"
-          className="w-full border border-black/20 px-[1em] py-[0.5em] focus:border-black/40 focus:outline-none"
+          className="w-full border border-black/20 p-[1em] focus:border-black/40 focus:outline-none"
           {...register("name")}
           placeholder="Name"
         />
@@ -57,7 +57,7 @@ const ContactForm = () => {
       <div>
         <input
           type="text"
-          className="w-full border border-black/20 px-[1em] py-[0.5em] focus:border-black/40 focus:outline-none"
+          className="w-full border border-black/20 p-[1em] focus:border-black/40 focus:outline-none"
           {...register("email")}
           placeholder="Email"
         />
@@ -72,7 +72,7 @@ const ContactForm = () => {
       <div>
         <input
           type="tel"
-          className="w-full border border-black/20 px-[1em] py-[0.5em] focus:border-black/40 focus:outline-none"
+          className="w-full border border-black/20 p-[1em] focus:border-black/40 focus:outline-none"
           {...register("phoneNumber")}
           placeholder="Phone number"
         />
@@ -90,7 +90,7 @@ const ContactForm = () => {
             setValue("discoveryMedium", value, { shouldValidate: true })
           }
         >
-          <SelectTrigger className="w-full border border-black/20 px-[1em] py-[0.5em] focus:border-black/40">
+          <SelectTrigger className="w-full border border-black/20 bg-white p-[1em] focus:border-black/40">
             <SelectValue placeholder="How did you find us?" />
           </SelectTrigger>
           <SelectContent align="center" className="rounded-none">
@@ -112,7 +112,7 @@ const ContactForm = () => {
       <Button
         type="submit"
         variant="secondary"
-        className="rounded-none py-[0.8em] uppercase"
+        className="rounded-none py-[1em] uppercase after:bg-white/10 after:duration-1000"
         disabled={isSubmitting}
       >
         Send
