@@ -77,7 +77,7 @@ const Navbar = () => {
           <Image
             src={logo}
             alt="Logo of saint roch"
-            className="h-[50px] w-fit object-contain"
+            className="h-[35px] w-fit object-contain"
           />
         </Link>
 

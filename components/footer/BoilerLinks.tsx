@@ -3,11 +3,11 @@ import Link from "next/link";
 
 const BoilerLinks = () => {
   return (
-    <div>
-      <h5 className="text-[16px] font-semibold sm:text-[17px] md:text-[18px] lg:text-[19px] xl:text-[20px] 2xl:text-[21px]">
+    <div className="lg:flex lg:flex-col">
+      <h5 className="text-[16px] font-semibold sm:text-[17px] md:text-[18px] lg:shrink-0 lg:text-[19px] xl:text-[20px] 2xl:text-[21px]">
         Saint Roch Boilers:
       </h5>
-      <ul className="mt-[0.7em] flex flex-col gap-[0.8em]">
+      <ul className="mt-[0.7em] flex flex-col gap-[0.8em] lg:grow lg:justify-between">
         {/* Residential boilers */}
         <li>
           <h6 className="text-[1.1em] font-medium">Residential Boilers</h6>

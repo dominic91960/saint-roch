@@ -5,9 +5,9 @@ import { IoLogoYoutube } from "react-icons/io5";
 import { FaFacebook, FaInstagram, FaLinkedin, FaGoogle } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
-const SocialLinks = () => {
+const SocialLinks: React.FC<{ className?: string }> = ({ className = "" }) => {
   return (
-    <div className="col-span-full mx-auto mt-[0.4em] w-fit text-center">
+    <div className={className}>
       <h6 className="text-[1.1em] font-semibold">Follow Us</h6>
       <ul className="mt-[0.8em] flex gap-[0.8em] text-[1.5em]">
         <li>

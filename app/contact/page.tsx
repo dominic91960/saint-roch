@@ -1,14 +1,15 @@
 import React from "react";
 
 import Navbar from "@/components/Navbar";
-import Contact from "@/components/contact/Contact";
+import Footer from "@/components/footer/Footer";
 
 const ContactPage = () => {
   return (
-    <div>
+    <>
       <Navbar />
-      <Contact />
-    </div>
+      <div className="h-[59vh]"></div>
+      <Footer />
+    </>
   );
 };
 

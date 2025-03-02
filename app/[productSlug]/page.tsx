@@ -1,5 +1,7 @@
 import React from "react";
 
+import { productData } from "@/lib/constants";
+
 import Navbar from "@/components/Navbar";
 import MainSection from "@/components/product-page/MainSection";
 import ProductImportance from "@/components/product-page/ProductImportance";
@@ -7,8 +9,7 @@ import BoilerDesign from "@/components/product-page/BoilerDesign";
 import ProductDescription from "@/components/product-page/ProductDescription";
 import ProductCarousel from "@/components/product-page/ProductCarousel";
 import TechnicalData from "@/components/product-page/TechnicalData";
-
-import { productData } from "@/lib/constants";
+import Footer from "@/components/footer/Footer";
 
 type Params = Promise<{ productSlug: string }>;
 
@@ -38,7 +39,7 @@ const ProductDetailsPage = async (props: { params: Params }) => {
       />
       <ProductCarousel carouselData={product.carouselData} />
       <TechnicalData title={product.title} data={product.technicalData} />
-      <div className="h-[200px] bg-black"></div>
+      <Footer />
     </>
   );
 };
