@@ -459,3 +459,10 @@ export const productData = [
     technicalData: commodoreTechnicalData,
   },
 ];
+
+// -------- -------- SELECT OPTIONS IN CONTACT FORM -------- --------
+export const discoveryMediumData = [
+  { value: "youtube", label: "Youtube" },
+  { value: "facebook", label: "Facebook" },
+  { value: "tiktok", label: "TikTok" },
+];
