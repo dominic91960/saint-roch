@@ -13,7 +13,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
-import { discoveryMediumData } from "@/lib/constants";
+import { discoveryMediumData } from "@/lib/constants/contact";
 import { ContactFormSchema, ContactFormType } from "@/lib/validation";
 import { Button } from "../ui/button";
 

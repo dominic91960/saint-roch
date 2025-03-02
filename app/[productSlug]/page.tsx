@@ -1,6 +1,6 @@
 import React from "react";
 
-import { productData } from "@/lib/constants";
+import { productData } from "@/lib/constants/product";
 
 import Navbar from "@/components/Navbar";
 import MainSection from "@/components/product-page/MainSection";

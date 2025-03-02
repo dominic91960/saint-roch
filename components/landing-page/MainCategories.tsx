@@ -11,7 +11,7 @@ import { HiArrowLongRight } from "react-icons/hi2";
 import { SlideUp } from "@/lib/utils";
 import MainCategoryCarousel from "./MainCategoryCarousel";
 
-import { homepageCategoriesData } from "@/lib/constants";
+import { homepageCategoriesData } from "@/lib/constants/home";
 
 const MainCategories = () => {
   return (
