@@ -4,7 +4,6 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import { usePathname, useRouter } from "next/navigation";
-import Link from "next/link";
 
 import {
   Select,
@@ -51,6 +50,7 @@ const Navbar = () => {
   }, []);
 
   const toggleMobileNav = () => {
+    document.body.classList.toggle("nav-open");
     setIsMobileNavOpen((prev) => !prev);
   };
   const getColor = (currentPath: string) => {
@@ -63,41 +63,47 @@ const Navbar = () => {
     else return inactiveClasses;
   };
   const pushRoute = (to: string) => {
+    const bodyClasses = document.body.classList;
+    if (bodyClasses.contains("nav-open")) bodyClasses.remove("nav-open");
+
     router.push(to);
   };
 
   return (
     <section
-      className={`left-0 right-0 top-0 z-50 flex h-[60px] items-center bg-white ${inter.className} text-[16px] shadow-[0_0_5px_rgba(0,0,0,0.6)] ${isMobileNavOpen ? "fixed" : "absolute"}`}
+      className={`z-50 flex items-center bg-white ${inter.className} relative text-[16px] shadow-[0_0_5px_rgba(0,0,0,0.6)]`}
     >
       {/* Contains logo, desktop nav links and mobile toggle */}
-      <div className="section-padding container mx-auto flex items-center justify-between 2xl:px-[50px]">
+      <div className="section-padding container mx-auto flex h-[60px] items-center justify-between 2xl:px-[50px]">
         {/* Logo */}
-        <Link href="/" className="flex items-center justify-start">
+        <button
+          className="flex items-center justify-start"
+          onClick={() => pushRoute("/")}
+        >
           <Image
             src={logo}
             alt="Logo of saint roch"
             className="h-[35px] w-fit object-contain"
           />
-        </Link>
+        </button>
 
         {/* Desktop nav links */}
         <nav className="hidden gap-[3em] font-medium md:flex md:items-center">
           {navLinks.map(({ mainLink, links }) => {
             if (!mainLink)
               return (
-                <Link
+                <button
                   key={links[0].label}
-                  href={links[0].to}
                   className={`${getColor(links[0].to)} hover:text-primary`}
+                  onClick={() => pushRoute(links[0].to)}
                 >
                   {links[0].label}
-                </Link>
+                </button>
               );
 
             return (
               <Select key={mainLink} onValueChange={pushRoute}>
-                <SelectTrigger className="hover:text-primary">
+                <SelectTrigger className="w-fit hover:text-primary">
                   <SelectValue placeholder={mainLink} />
                 </SelectTrigger>
                 <SelectContent align="center">
@@ -133,18 +139,18 @@ const Navbar = () => {
           {navLinks.map(({ mainLink, links }) => {
             if (!mainLink)
               return (
-                <Link
+                <button
                   key={links[0].label}
-                  href={links[0].to}
                   className={`w-full border-b py-[0.5em] ${getColor(links[0].to)} hover:text-primary`}
+                  onClick={() => pushRoute(links[0].to)}
                 >
                   {links[0].label}
-                </Link>
+                </button>
               );
 
             return (
               <Select key={mainLink} onValueChange={pushRoute}>
-                <SelectTrigger className="w-full border-b border-b-black/30 py-[0.5em] hover:text-primary">
+                <SelectTrigger className="w-full border-b border-b-black/30 py-[0.5em] text-center hover:text-primary">
                   <SelectValue placeholder={mainLink} />
                 </SelectTrigger>
                 <SelectContent align="center" className="rounded-none">

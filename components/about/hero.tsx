@@ -14,7 +14,7 @@ import { SlideLeft, SlideRight, SlideUp } from "@/lib/utils";
 
 function Hero() {
   return (
-    <div className="relative mt-[60px]">
+    <div className="relative">
       <div className="grid grid-cols-2 gap-11">
         <div>
           <motion.div
