@@ -29,6 +29,7 @@ const navLinks = [
     ],
   },
   { mainLink: null, links: [{ to: "/about", label: "About Us" }] },
+  { mainLink: null, links: [{ to: "/blog", label: "Our Blog" }] },
   { mainLink: null, links: [{ to: "/contact", label: "Contact Us" }] },
 ];
 
@@ -120,6 +121,7 @@ const Navbar = () => {
               </Select>
             );
           })}
+          <button className="hover:text-primary">Downloads</button>
         </nav>
 
         {/* Mobile toggle */}
@@ -167,6 +169,9 @@ const Navbar = () => {
               </Select>
             );
           })}
+          <button className="border-b border-b-black/30 py-[0.5em] hover:text-primary">
+            Downloads
+          </button>
         </nav>
       </div>
     </section>

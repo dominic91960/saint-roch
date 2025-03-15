@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/about/hero";
 import Footer from "@/components/footer/Footer";
 
-function page() {
+function AboutPage() {
   return (
     <>
       <Navbar />
@@ -14,4 +14,4 @@ function page() {
   );
 }
 
-export default page;
+export default AboutPage;
