@@ -163,22 +163,21 @@ const FeaturedProducts = () => {
                               className="relative z-[1] object-contain"
                             />
                           </div>
+                          {/* Desc */}
+                          <p className="relative -mt-[2em] me-[1.2em] ms-auto max-w-[38ch] border-e-[0.4em] border-e-primary pe-[0.4em] pt-[2em] text-right text-[11px] leading-tight sm:me-[1.4em] sm:text-[12px] md:me-[1.6em] md:max-w-[46ch] md:text-[12.5px] lg:me-[1.8em] lg:text-[13px] xl:me-[2em] xl:text-[13.5px] 2xl:me-[2em] 2xl:border-e-[0.6em] 2xl:text-[14px]">
+                            <span className="absolute bottom-[60%] right-[20%] text-[60px] font-bold leading-none text-black/20 sm:text-[78px] md:text-[96px] lg:text-[114px] xl:text-[132px] 2xl:text-[150px]">
+                              {id}
+                            </span>
+                            <span className="text-[1.8em] font-semibold">
+                              {title}
+                            </span>{" "}
+                            <br />
+                            <span className="font-bold">{emphasis}</span> {desc}
+                          </p>
                         </SwiperSlide>
                       ))}
                       <SwiperNavButtons />
                     </Swiper>
-
-                    {/* Desc */}
-                    <p className="relative -mt-[2em] me-[1.2em] ms-auto max-w-[38ch] border-e-[0.4em] border-e-primary pe-[0.4em] pt-[2em] text-right text-[11px] leading-tight sm:me-[1.4em] sm:text-[12px] md:me-[1.6em] md:max-w-[46ch] md:text-[12.5px] lg:me-[1.8em] lg:text-[13px] xl:me-[2em] xl:text-[13.5px] 2xl:me-[2em] 2xl:border-e-[0.6em] 2xl:text-[14px]">
-                      <span className="absolute bottom-[60%] right-[20%] text-[60px] font-bold leading-none text-black/20 sm:text-[78px] md:text-[96px] lg:text-[114px] xl:text-[132px] 2xl:text-[150px]">
-                        {id}
-                      </span>
-                      <span className="text-[1.8em] font-semibold">
-                        {title}
-                      </span>{" "}
-                      <br />
-                      <span className="font-bold">{emphasis}</span> {desc}
-                    </p>
                   </article>
                 </div>
               </SwiperSlide>
