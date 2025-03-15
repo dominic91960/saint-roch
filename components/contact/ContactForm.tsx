@@ -12,10 +12,12 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { Checkbox } from "@/components/ui/checkbox";
 
 import { discoveryMediumData } from "@/lib/constants/contact";
 import { ContactFormSchema, ContactFormType } from "@/lib/validation";
 import { Button } from "../ui/button";
+import Link from "next/link";
 
 const ContactForm = () => {
   const {
@@ -90,7 +92,7 @@ const ContactForm = () => {
             setValue("discoveryMedium", value, { shouldValidate: true })
           }
         >
-          <SelectTrigger className="w-full border border-black/20 bg-white p-[1em] focus:border-black/40">
+          <SelectTrigger className="w-full justify-between border border-black/20 bg-white p-[1em] focus:border-black/40">
             <SelectValue placeholder="How did you find us?" />
           </SelectTrigger>
           <SelectContent align="center" className="rounded-none">
@@ -106,6 +108,19 @@ const ContactForm = () => {
             {errors.discoveryMedium.message}
           </p>
         )}
+      </div>
+
+      <div className="flex items-center gap-[0.3em]">
+        <Checkbox id="privacy-checkbox" />
+        <label htmlFor="privacy-checkbox">
+          I have read and agree to the{" "}
+          <Link
+            href="/terms-and-conditions"
+            className="underline hover:text-primary"
+          >
+            terms and conditions
+          </Link>
+        </label>
       </div>
 
       {/* Submit */}

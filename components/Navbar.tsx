@@ -38,7 +38,6 @@ const Navbar = () => {
   const router = useRouter();
 
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
-  console.log(path);
 
   useEffect(() => {
     const closeMobileNav = () => {
