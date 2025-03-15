@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -20,6 +20,8 @@ import { Button } from "../ui/button";
 import Link from "next/link";
 
 const ContactForm = () => {
+  const [isAgreed, setIsAgreed] = useState(false);
+
   const {
     register,
     setValue,
@@ -51,6 +53,21 @@ const ContactForm = () => {
         {errors.name && (
           <p className="mt-[0.2em] text-[0.9em] text-primary">
             {errors.name.message}
+          </p>
+        )}
+      </div>
+
+      {/* Company name */}
+      <div>
+        <input
+          type="text"
+          className="w-full border border-black/20 p-[1em] focus:border-black/40 focus:outline-none"
+          {...register("companyName")}
+          placeholder="Company name"
+        />
+        {errors.companyName && (
+          <p className="mt-[0.2em] text-[0.9em] text-primary">
+            {errors.companyName.message}
           </p>
         )}
       </div>
@@ -110,8 +127,29 @@ const ContactForm = () => {
         )}
       </div>
 
+      {/* Message */}
+      <div>
+        <textarea
+          rows={4}
+          className="w-full border border-black/20 p-[1em] focus:border-black/40 focus:outline-none"
+          {...register("message")}
+          placeholder="Your message"
+        />
+        {errors.message && (
+          <p className="mt-[0.2em] text-[0.9em] text-primary">
+            {errors.message.message}
+          </p>
+        )}
+      </div>
+
       <div className="flex items-center gap-[0.3em]">
-        <Checkbox id="privacy-checkbox" />
+        <Checkbox
+          id="privacy-checkbox"
+          checked={isAgreed}
+          onCheckedChange={(checked: boolean | "indeterminate") => {
+            if (checked !== "indeterminate") setIsAgreed(checked);
+          }}
+        />
         <label htmlFor="privacy-checkbox">
           I have read and agree to the{" "}
           <Link
@@ -128,7 +166,7 @@ const ContactForm = () => {
         type="submit"
         variant="secondary"
         className="rounded-none py-[1em] uppercase after:bg-white/10 after:duration-1000"
-        disabled={isSubmitting}
+        disabled={!isAgreed || isSubmitting}
       >
         Send
       </Button>

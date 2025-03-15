@@ -4,6 +4,9 @@ export const ContactFormSchema = z.object({
   name: z.string({ message: "Name is required" }).min(1, {
     message: "Name is required",
   }),
+  companyName: z.string({ message: "Company name is required" }).min(1, {
+    message: "Company name is required",
+  }),
   email: z
     .string({ message: "Email address is required" })
     .email({
@@ -24,6 +27,17 @@ export const ContactFormSchema = z.object({
   discoveryMedium: z.string({ message: "Medium is required" }).min(1, {
     message: "Medium is required",
   }),
+  message: z
+    .string({ message: "Message is required" })
+    .min(1, {
+      message: "Message is required",
+    })
+    .min(20, {
+      message: "Message is too short",
+    })
+    .max(400, {
+      message: "Message is too long",
+    }),
 });
 
 export type ContactFormType = z.infer<typeof ContactFormSchema>;

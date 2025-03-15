@@ -46,7 +46,10 @@ const ContactButton = () => {
                 <p>+94 11 765 4321</p>
               </div>
             </Link>
-            <Link href="tel:+94117654321" className="hover:text-primary">
+            <Link
+              href="https://wa.me/94769876543"
+              className="hover:text-primary"
+            >
               <div className="flex items-center gap-[0.3em]">
                 <FaWhatsapp />
                 <p>+94 11 765 4321</p>
