@@ -41,12 +41,13 @@ const ContactForm = () => {
         body: JSON.stringify(submitData),
       });
 
+      const { message } = await res.json();
+
       if (!res.ok) {
-        addToast("ERROR", "Failed to send message.");
+        addToast("ERROR", message);
         return;
       }
 
-      const { message } = await res.json();
       addToast("SUCCESS", message);
       reset();
     } catch (error) {

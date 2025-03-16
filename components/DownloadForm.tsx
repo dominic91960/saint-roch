@@ -27,30 +27,27 @@ const DownloadForm: React.FC<{ link: string }> = ({ link }) => {
   });
 
   const onFormSubmit = async (submitData: DownloadFormType) => {
-    // try {
-    //   const res = await fetch("/api/download", {
-    //     method: "POST",
-    //     body: JSON.stringify(submitData),
-    //   });
+    try {
+      const res = await fetch("/api/download", {
+        method: "POST",
+        body: JSON.stringify({ ...submitData, catalog: link.slice(1) }),
+      });
 
-    //   if (!res.ok) {
-    //     addToast("ERROR", "Failed to send message.");
-    //     return;
-    //   }
+      const { message } = await res.json();
 
-    //   const { message } = await res.json();
-    //   addToast("SUCCESS", message);
-    //   reset();
-    // } catch (error) {
-    //   const errorMessage =
-    //     error instanceof Error ? error.message : "Failed to send message.";
+      if (!res.ok) {
+        addToast("ERROR", message);
+        return;
+      }
 
-    //   addToast("ERROR", errorMessage);
-    // }
-    console.log(submitData);
-    if (linkRef.current) linkRef.current.click();
-    addToast("ERROR", "Failed to send message.");
-    reset();
+      addToast("SUCCESS", message);
+      if (linkRef.current) linkRef.current.click();
+      reset();
+    } catch (error) {
+      const errorMessage =
+        error instanceof Error ? error.message : "Failed to send message.";
+      addToast("ERROR", errorMessage);
+    }
   };
 
   return (
@@ -122,13 +119,13 @@ const DownloadForm: React.FC<{ link: string }> = ({ link }) => {
 
       <div className="flex items-center gap-[0.3em]">
         <Checkbox
-          id="privacy-checkbox"
+          id="download-privacy-checkbox"
           checked={isAgreed}
           onCheckedChange={(checked: boolean | "indeterminate") => {
             if (checked !== "indeterminate") setIsAgreed(checked);
           }}
         />
-        <label htmlFor="privacy-checkbox">
+        <label htmlFor="download-privacy-checkbox">
           I have read and agree to the{" "}
           <Link
             href="/terms-and-conditions"
