@@ -1,60 +1,56 @@
 "use client";
 
-import React, { useState, useContext } from "react";
+import React, { useContext, useRef, useState } from "react";
 import Link from "next/link";
 
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { Button } from "../ui/button";
+import { Button } from "./ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 
 import { ToastContext } from "@/store/toast-context";
-import { discoveryMediumData } from "@/lib/constants/contact";
-import { ContactFormSchema, ContactFormType } from "@/lib/validation";
+import { DownloadFormSchema, DownloadFormType } from "@/lib/validation";
 
-const ContactForm = () => {
+const DownloadForm: React.FC<{ link: string }> = ({ link }) => {
   const { addToast } = useContext(ToastContext);
+  const linkRef = useRef<HTMLAnchorElement | null>(null);
   const [isAgreed, setIsAgreed] = useState(false);
 
   const {
     register,
-    setValue,
     handleSubmit,
     formState: { errors, isSubmitting },
     reset,
-  } = useForm<ContactFormType>({
-    resolver: zodResolver(ContactFormSchema),
+  } = useForm<DownloadFormType>({
+    resolver: zodResolver(DownloadFormSchema),
   });
 
-  const onFormSubmit = async (submitData: ContactFormType) => {
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        body: JSON.stringify(submitData),
-      });
+  const onFormSubmit = async (submitData: DownloadFormType) => {
+    // try {
+    //   const res = await fetch("/api/download", {
+    //     method: "POST",
+    //     body: JSON.stringify(submitData),
+    //   });
 
-      if (!res.ok) {
-        addToast("ERROR", "Failed to send message.");
-        return;
-      }
+    //   if (!res.ok) {
+    //     addToast("ERROR", "Failed to send message.");
+    //     return;
+    //   }
 
-      const { message } = await res.json();
-      addToast("SUCCESS", message);
-      reset();
-    } catch (error) {
-      const errorMessage =
-        error instanceof Error ? error.message : "Failed to send message.";
+    //   const { message } = await res.json();
+    //   addToast("SUCCESS", message);
+    //   reset();
+    // } catch (error) {
+    //   const errorMessage =
+    //     error instanceof Error ? error.message : "Failed to send message.";
 
-      addToast("ERROR", errorMessage);
-    }
+    //   addToast("ERROR", errorMessage);
+    // }
+    console.log(submitData);
+    if (linkRef.current) linkRef.current.click();
+    addToast("ERROR", "Failed to send message.");
+    reset();
   };
 
   return (
@@ -62,6 +58,8 @@ const ContactForm = () => {
       className="flex flex-col gap-[1.5em]"
       onSubmit={handleSubmit(onFormSubmit)}
     >
+      <p>Please provide the following information before download.</p>
+
       {/* Name */}
       <div>
         <input
@@ -122,46 +120,6 @@ const ContactForm = () => {
         )}
       </div>
 
-      {/* Medium */}
-      <div>
-        <Select
-          onValueChange={(value: string) =>
-            setValue("discoveryMedium", value, { shouldValidate: true })
-          }
-        >
-          <SelectTrigger className="w-full justify-between border border-black/20 bg-white p-[1em] focus:border-black/40">
-            <SelectValue placeholder="How did you find us?" />
-          </SelectTrigger>
-          <SelectContent align="center" className="rounded-none">
-            {discoveryMediumData.map(({ value, label }) => (
-              <SelectItem key={label} value={value} className="rounded-none">
-                {label}
-              </SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
-        {errors.discoveryMedium && (
-          <p className="mt-[0.2em] text-[0.9em] text-primary">
-            {errors.discoveryMedium.message}
-          </p>
-        )}
-      </div>
-
-      {/* Message */}
-      <div>
-        <textarea
-          rows={4}
-          className="w-full border border-black/20 p-[1em] focus:border-black/40 focus:outline-none"
-          {...register("message")}
-          placeholder="Your message"
-        />
-        {errors.message && (
-          <p className="mt-[0.2em] text-[0.9em] text-primary">
-            {errors.message.message}
-          </p>
-        )}
-      </div>
-
       <div className="flex items-center gap-[0.3em]">
         <Checkbox
           id="privacy-checkbox"
@@ -192,10 +150,18 @@ const ContactForm = () => {
         className="rounded-none py-[1em] uppercase after:bg-white/10 after:duration-1000"
         disabled={!isAgreed || isSubmitting}
       >
-        Send
+        Download
       </Button>
+
+      <Link
+        ref={linkRef}
+        href={link}
+        target="_blank"
+        download
+        className="hidden"
+      ></Link>
     </form>
   );
 };
 
-export default ContactForm;
+export default DownloadForm;
