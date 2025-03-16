@@ -17,12 +17,7 @@ const MainCategories = () => {
   return (
     <section className="container mx-auto px-[15px] text-[14px] sm:text-[17px] md:text-[20px] lg:text-[22px] xl:text-[24px] 2xl:text-[27px]">
       {homepageCategoriesData.map(
-        ({
-          name,
-          wattage,
-          slogan,
-          products: { boilerImages, desc, boilerNames },
-        }) => (
+        ({ name, wattage, slogan, boilerImages, desc, boilerNames }) => (
           <React.Fragment key={name}>
             {/* Category name */}
             <h1 className="title-text-stroke relative inline-flex w-full flex-col text-[48px] capitalize leading-[0.9em] sm:text-[76px] md:text-[104px] lg:text-[132px] xl:text-[160px] 2xl:text-[196px]">

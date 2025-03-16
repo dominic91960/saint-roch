@@ -65,7 +65,7 @@ const FeaturedProducts = () => {
           loop={true}
           spaceBetween={10}
           slidesPerView={1}
-          // autoplay={{ pauseOnMouseEnter: true }}
+          autoplay={{ pauseOnMouseEnter: true }}
           breakpoints={{
             1024: {
               slidesPerView: 2,
@@ -104,11 +104,11 @@ const FeaturedProducts = () => {
                     loop={true}
                     spaceBetween={10}
                     slidesPerView={1}
-                    // autoplay={{
-                    //   delay: 5000,
-                    //   disableOnInteraction: false,
-                    //   pauseOnMouseEnter: false,
-                    // }}
+                    autoplay={{
+                      delay: 5000,
+                      disableOnInteraction: false,
+                      pauseOnMouseEnter: false,
+                    }}
                     className="mySwiper -mt-[12%]"
                   >
                     {products.map(({ id, image, title, desc }) => (
