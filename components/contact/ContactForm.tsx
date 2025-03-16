@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import Link from "next/link";
 
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -12,14 +13,15 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { Button } from "../ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 
+import { ToastContext } from "@/store/toast-context";
 import { discoveryMediumData } from "@/lib/constants/contact";
 import { ContactFormSchema, ContactFormType } from "@/lib/validation";
-import { Button } from "../ui/button";
-import Link from "next/link";
 
 const ContactForm = () => {
+  const { addToast } = useContext(ToastContext);
   const [isAgreed, setIsAgreed] = useState(false);
 
   const {
@@ -33,8 +35,26 @@ const ContactForm = () => {
   });
 
   const onFormSubmit = async (submitData: ContactFormType) => {
-    console.log(submitData);
-    reset();
+    try {
+      const res = await fetch("/api/emails", {
+        method: "POST",
+        body: JSON.stringify(submitData),
+      });
+
+      if (!res.ok) {
+        addToast("ERROR", "Failed to send message.");
+        return;
+      }
+
+      const { message } = await res.json();
+      addToast("SUCCESS", message);
+      reset();
+    } catch (error) {
+      const errorMessage =
+        error instanceof Error ? error.message : "Failed to send message.";
+
+      addToast("ERROR", errorMessage);
+    }
   };
 
   return (
