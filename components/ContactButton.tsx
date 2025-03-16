@@ -48,6 +48,7 @@ const ContactButton = () => {
             </Link>
             <Link
               href="https://wa.me/94769876543"
+              target="_blank"
               className="hover:text-primary"
             >
               <div className="flex items-center gap-[0.3em]">
