@@ -35,7 +35,7 @@ const MainCategoryCarousel: React.FC<MainCategoryCarouselProps> = ({
               className="relative z-[1] w-full object-contain"
             />
             <h2
-              className={`light-text-stroke absolute left-0 uppercase leading-none ${title === "Optimajor" || title === "Commodore" ? "top-[4%] text-[0.94em]" : "top-0 text-[1.75em]"}`}
+              className={`light-text-stroke absolute left-0 uppercase leading-none ${title === "Optimajor" || title === "Commodore" ? "top-[4%] text-[0.85em] sm:text-[0.83em] md:text-[0.8em] 2xl:text-[0.94em]" : "top-0 text-[1.75em]"}`}
             >
               {title}
             </h2>

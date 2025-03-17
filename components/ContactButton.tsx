@@ -6,8 +6,8 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { IoCall } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
-import { BsTelephone } from "react-icons/bs";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaPhoneSquareAlt } from "react-icons/fa";
+import { FaWhatsappSquare } from "react-icons/fa";
 
 const ContactButton = () => {
   const [contactInfoVisible, setContactInfoVisible] = useState(false);
@@ -34,26 +34,26 @@ const ContactButton = () => {
             animate={{ opacity: 1, y: 0 }}
             className="flex flex-col gap-[0.5em] ps-[0.3em]"
           >
-            <Link href="tel:+94117654321" className="hover:text-primary">
+            <Link href="tel:+390454450067" className="hover:text-primary">
               <div className="flex items-center gap-[0.3em]">
-                <BsTelephone />
-                <p>+94 11 765 4321</p>
+                <FaPhoneSquareAlt className="text-[1.5em]" />
+                <p>+39 045 445 0067</p>
               </div>
             </Link>
-            <Link href="tel:+94117654321" className="hover:text-primary">
+            <Link href="tel:+390454450067" className="hover:text-primary">
               <div className="flex items-center gap-[0.3em]">
-                <BsTelephone />
-                <p>+94 11 765 4321</p>
+                <FaPhoneSquareAlt className="text-[1.5em]" />
+                <p>+39 045 445 0067</p>
               </div>
             </Link>
             <Link
-              href="https://wa.me/94769876543"
+              href="https://wa.me/+390454450067"
               target="_blank"
               className="hover:text-primary"
             >
               <div className="flex items-center gap-[0.3em]">
-                <FaWhatsapp />
-                <p>+94 11 765 4321</p>
+                <FaWhatsappSquare className="text-[1.5em] text-green-500" />
+                <p>+39 045 445 0067</p>
               </div>
             </Link>
           </motion.div>

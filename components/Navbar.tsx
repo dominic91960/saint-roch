@@ -79,7 +79,7 @@ const Navbar = () => {
         <div className="section-padding container mx-auto flex h-[60px] items-center justify-between 2xl:px-[50px]">
           {/* Logo */}
           <button
-            className="flex items-center justify-start"
+            className="mb-[3px] flex items-center justify-start"
             onClick={() => pushRoute("/")}
           >
             <Image

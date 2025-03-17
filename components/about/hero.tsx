@@ -8,7 +8,7 @@ import "../about/aboutstyle.css";
 import Since1903 from "../../assets/images/about/since1903.png";
 import TheRokor from "../../assets/images/about/therokor.png";
 import Footerimage from "../../assets/images/about/footerimage.png";
-import HeriImage from "../../assets/images/about/HeroAbout.jpg";
+import HeriImage from "../../assets/images/about/contact-form-img.png";
 
 import { SlideLeft, SlideRight, SlideUp } from "@/lib/utils";
 
@@ -22,7 +22,9 @@ function Hero() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
+            className="relative"
           >
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-white"></div>
             <Image
               className="aboutUs w-full sm:h-[300px] lg:h-[400px] xl:h-[420px] 2xl:h-[600px]"
               src={HeriImage}
