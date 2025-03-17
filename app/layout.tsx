@@ -7,7 +7,7 @@ import "./globals.css";
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Saint Roch",
+  title: "Saint Roch Srl | boiler or heating solutions, Italy",
   description: "Effortless Warmth for Every Home",
 };
 
