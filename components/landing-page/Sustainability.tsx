@@ -1,20 +1,30 @@
 import React from "react";
+import Image from "next/image";
 
 import { TbPointFilled } from "react-icons/tb";
+
+import logo from "@/assets/images/landing-page/sustainability/logo.png";
 
 const Sustainability = () => {
   return (
     <div className="container mx-auto sm:p-[2rem]">
-      <div className="m-[15px]  sm:m-0">
+      <div className="m-[15px] sm:m-0">
         <div className="mb-4 grid sm:grid-cols-5">
           <div className="col-span-2">
-            <p className="text-[50px] font-semibold sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[80px]">
+            {/* <p className="text-[50px] font-semibold sm:text-[35px] md:text-[40px] lg:text-[60px] xl:text-[80px]">
               Saint
             </p>
             <p className="text-[50px] font-semibold sm:text-[35px] md:text-[40px] lg:mt-[-20px] lg:text-[60px] xl:mt-[-40px] xl:text-[80px]">
               Roch Devs
-            </p>
-            <div className="xl;w-[250px] h-[3px] w-[80px] bg-black sm:w-[80px] md:w-[80px] lg:w-[150px]"></div>
+            </p> */}
+            <div>
+              <Image
+                src={logo}
+                alt="Saint Roch logo"
+                className="h-[50px] w-fit sm:h-[35px] md:h-[46px] lg:h-[57px] xl:h-[68px] 2xl:h-[80px]"
+              />
+            </div>
+            <div className="mt-[1em] h-[3px] w-[80px] bg-black sm:w-[80px] md:w-[80px] lg:w-[150px] xl:w-[250px]"></div>
             <p className="mb-6 text-[30px] font-semibold text-red-600 sm:mb-0 sm:text-[18px] md:text-[20px] lg:text-[20px] xl:text-[40px]">
               Sustainability at
             </p>
