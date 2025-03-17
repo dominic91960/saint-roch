@@ -25,8 +25,9 @@ const Hero = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
+          className="relative z-10"
         >
-          <h1 className="title-text-stroke relative z-[1] translate-y-[0.3em] text-[50px] leading-none sm:text-[80px] md:text-[80px] lg:text-[80px] xl:text-[95px] 2xl:text-[180px]">
+          <h1 className="title-text-stroke text-[50px] leading-none sm:text-[80px] md:text-[80px] lg:text-[80px] xl:text-[95px] 2xl:text-[180px]">
             Exceptional
           </h1>
         </motion.div>
@@ -35,41 +36,34 @@ const Hero = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
+          className="relative z-10"
         >
-          <h1 className="title-text-stroke relative z-[1] translate-y-[0.3em] text-[50px] leading-none sm:text-[80px] md:text-[80px] lg:text-[80px] xl:text-[95px] 2xl:text-[180px]">
+          <h1 className="title-text-stroke text-[50px] leading-none sm:text-[80px] md:text-[80px] lg:text-[80px] xl:text-[95px] 2xl:text-[180px]">
             Quality
           </h1>
         </motion.div>
 
         {/* Image */}
-        <div className="mx-auto w-[290px] sm:-mt-[5px] sm:w-[350px] md:-mt-[10px] md:w-[410px] lg:-mt-[15px] lg:w-[480px] xl:-mt-[18px] xl:w-[550px] 2xl:-mt-[20px] 2xl:w-[700px]">
-          {/* <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ type: "spring", stiffness: 100, delay: 0.3 }}
-          >
-            <Image src={hero} alt="Hero" className="object-contain" priority />
-          </motion.div> */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ type: "spring", stiffness: 100, delay: 0.3 }}
-          >
-            <video
-              autoPlay
-              disablePictureInPicture
-              disableRemotePlayback
-              loop
-              muted
-              playsInline
-              src="/hero-bg.mp4"
-              className="relative mx-auto h-auto w-[300px] -translate-y-[1em] sm:w-[250px] md:w-[300px] lg:w-[400px] xl:w-[350px] 2xl:w-[550px]"
-            ></video>
-          </motion.div>
-        </div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ type: "spring", stiffness: 100, delay: 0.3 }}
+          className="mx-auto w-[290px] sm:-mt-[5px] sm:w-[350px] md:-mt-[10px] md:w-[410px] lg:-mt-[15px] lg:w-[480px] xl:-mt-[18px] xl:w-[550px] 2xl:-mt-[20px] 2xl:w-[700px]"
+        >
+          <video
+            autoPlay
+            disablePictureInPicture
+            disableRemotePlayback
+            loop
+            muted
+            playsInline
+            src="/hero.mp4"
+            className="w-full"
+          ></video>
+        </motion.div>
 
         {/* CTA */}
-        <div className="mt-[1.8em] flex -translate-y-[6em] flex-col items-center justify-center gap-[1em] sm:flex-row">
+        <div className="mt-[1.8em] flex flex-col items-center justify-center gap-[1em] sm:flex-row">
           <Button variant="primary">Explore Our boilers</Button>
           <Button size="none">
             Learn more about sustainability <HiArrowLongRight />
