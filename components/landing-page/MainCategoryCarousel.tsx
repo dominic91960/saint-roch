@@ -42,7 +42,7 @@ const MainCategoryCarousel: React.FC<MainCategoryCarouselProps> = ({
             <Image
               src={image}
               alt={alt}
-              className="relative z-[1] -mt-[5%] w-full object-contain"
+              className="relative z-[1] w-full object-contain"
             />
           </div>
         </SwiperSlide>
