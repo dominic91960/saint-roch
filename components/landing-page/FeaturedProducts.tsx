@@ -71,6 +71,10 @@ const FeaturedProducts = () => {
               slidesPerView: 2,
               spaceBetween: 10,
             },
+            1280: {
+              slidesPerView: 3,
+              spaceBetween: 10,
+            },
           }}
           className="mySwiper"
         >
@@ -82,9 +86,11 @@ const FeaturedProducts = () => {
                   className="relative w-full rounded-lg bg-white pb-[1.4em] pt-[2em] shadow-[1px_1px_5px_rgba(0,0,0,0.3)]"
                 >
                   {/* Title */}
-                  <h2 className="w-fit bg-[#D9D9D9] pe-[1.7em] ps-[0.7em] text-[20px] font-bold capitalize leading-[2em] sm:text-[23px] md:text-[26px] lg:text-[30px] xl:text-[35px] 2xl:text-[40px]">
-                    {category}
-                  </h2>
+                  <div className="w-fit bg-[#D9D9D9]">
+                    <h2 className="py-[0.5em] pe-[1.7em] ps-[0.7em] text-[20px] font-bold capitalize leading-none sm:text-[23px] md:text-[26px] lg:text-[30px] xl:text-[26px] 2xl:text-[32px]">
+                      {category}
+                    </h2>
+                  </div>
 
                   {/* Image with number*/}
                   <Swiper
@@ -113,7 +119,8 @@ const FeaturedProducts = () => {
                   >
                     {products.map(({ id, image, title, desc }) => (
                       <SwiperSlide key={id}>
-                        <div className="relative mx-auto mt-[8%] w-[232px] sm:w-[288px] md:w-[344px] lg:w-[400px] xl:w-[455px] 2xl:w-[512px]">
+                        {/* <div className="relative mx-auto mt-[8%] w-[232px] sm:w-[288px] md:w-[344px] lg:w-[400px] xl:w-[455px] 2xl:w-[512px]"> */}
+                        <div className="relative mx-auto mt-[8%] w-3/4">
                           <Image
                             src={image}
                             alt={category}
