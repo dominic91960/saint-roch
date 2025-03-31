@@ -13,12 +13,12 @@ const BoilerLinks = () => {
           <h6 className="text-[1.1em] font-medium">Residential Boilers</h6>
           <ol className="mt-[0.8em] flex list-inside list-decimal flex-col gap-[0.8em]">
             <li>
-              <Link href="/" className="hover:text-primary">
+              <Link href="/combi" className="hover:text-primary">
                 Combi
               </Link>
             </li>
             <li>
-              <Link href="/" className="hover:text-primary">
+              <Link href="/ultra" className="hover:text-primary">
                 Ultra
               </Link>
             </li>
@@ -30,12 +30,12 @@ const BoilerLinks = () => {
           <h6 className="text-[1.1em] font-medium">Commercial Boilers</h6>
           <ol className="mt-[0.8em] flex list-inside list-decimal flex-col gap-[0.8em]">
             <li>
-              <Link href="/" className="hover:text-primary">
+              <Link href="/combi" className="hover:text-primary">
                 Combi
               </Link>
             </li>
             <li>
-              <Link href="/" className="hover:text-primary">
+              <Link href="/ultra" className="hover:text-primary">
                 Ultra
               </Link>
             </li>
@@ -47,12 +47,12 @@ const BoilerLinks = () => {
           <h6 className="text-[1.1em] font-medium">Industrial Boilers</h6>
           <ol className="mt-[0.8em] flex list-inside list-decimal flex-col gap-[0.8em]">
             <li>
-              <Link href="/" className="hover:text-primary">
+              <Link href="/optimajor" className="hover:text-primary">
                 Optimajor
               </Link>
             </li>
             <li>
-              <Link href="/" className="hover:text-primary">
+              <Link href="/commodore" className="hover:text-primary">
                 Commodore
               </Link>
             </li>

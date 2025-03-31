@@ -4,7 +4,7 @@ import Image from "next/image";
 
 import { motion } from "framer-motion";
 
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/navbar/Navbar";
 import ContactForm from "@/components/contact/ContactForm";
 import Footer from "@/components/footer/Footer";
 

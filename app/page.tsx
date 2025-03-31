@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/navbar/Navbar";
 import Hero from "@/components/landing-page/Hero";
 import FeaturedProducts from "@/components/landing-page/FeaturedProducts";
 import MainCategories from "@/components/landing-page/MainCategories";

@@ -2,7 +2,7 @@ import React from "react";
 
 import { productData } from "@/lib/constants/product";
 
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/navbar/Navbar";
 import MainSection from "@/components/product-page/MainSection";
 import ProductImportance from "@/components/product-page/ProductImportance";
 import BoilerDesign from "@/components/product-page/BoilerDesign";
