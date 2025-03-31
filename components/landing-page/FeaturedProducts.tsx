@@ -67,12 +67,16 @@ const FeaturedProducts = () => {
           slidesPerView={1}
           autoplay={{ pauseOnMouseEnter: true }}
           breakpoints={{
-            1024: {
+            640: {
               slidesPerView: 2,
               spaceBetween: 10,
             },
-            1280: {
+            1024: {
               slidesPerView: 3,
+              spaceBetween: 10,
+            },
+            1280: {
+              slidesPerView: 4,
               spaceBetween: 10,
             },
           }}
@@ -83,11 +87,11 @@ const FeaturedProducts = () => {
               <div className="m-[10px] pb-[60px]">
                 <article
                   key={id}
-                  className="relative w-full rounded-lg bg-white pb-[1.4em] pt-[2em] shadow-[1px_1px_5px_rgba(0,0,0,0.3)]"
+                  className="relative w-full rounded-lg bg-white pb-[1.4em] pt-[2em] shadow-[1px_1px_5px_rgba(0,0,0,0.3)] md:pt-[1em] xl:pt-0 2xl:pt-[0.8em]"
                 >
                   {/* Title */}
-                  <div className="w-fit bg-[#D9D9D9]">
-                    <h2 className="py-[0.5em] pe-[1.7em] ps-[0.7em] text-[20px] font-bold capitalize leading-none sm:text-[23px] md:text-[26px] lg:text-[30px] xl:text-[26px] 2xl:text-[32px]">
+                  <div className="relative min-h-[5.5em] w-3/5">
+                    <h2 className="absolute bottom-0 left-0 top-0 my-auto h-fit bg-[#D9D9D9] py-[0.5em] pe-[1.7em] ps-[0.7em] text-[20px] font-bold capitalize leading-none sm:text-[23px] md:text-[26px] lg:text-[30px] xl:text-[26px] 2xl:text-[32px]">
                       {category}
                     </h2>
                   </div>
@@ -128,7 +132,7 @@ const FeaturedProducts = () => {
                           />
                         </div>
                         {/* Desc */}
-                        <p className="relative -mt-[2em] me-[1.2em] ms-auto max-w-[38ch] border-e-[0.4em] border-e-primary pe-[0.4em] pt-[2em] text-right text-[11px] leading-tight sm:me-[1.4em] sm:text-[12px] md:me-[1.6em] md:max-w-[46ch] md:text-[12.5px] lg:me-[1.8em] lg:text-[13px] xl:me-[2em] xl:text-[13.5px] 2xl:me-[2em] 2xl:border-e-[0.6em] 2xl:text-[14px]">
+                        <p className="relative -mt-[2em] me-[1.2em] ms-auto max-w-[38ch] border-e-[0.4em] border-e-primary pe-[0.4em] pt-[2em] text-right text-[11px] leading-tight sm:me-[1.4em] sm:max-w-[30ch] sm:text-[12px] md:me-[1.6em] md:text-[12.5px] lg:me-[1.8em] lg:max-w-[28ch] lg:text-[13px] xl:me-[2em] xl:max-w-[24ch] xl:text-[13.5px] 2xl:me-[2em] 2xl:max-w-[30ch] 2xl:border-e-[0.6em] 2xl:text-[14px]">
                           {/* <span className="absolute bottom-[60%] right-[20%] text-[60px] font-bold leading-none text-black/20 sm:text-[78px] md:text-[96px] lg:text-[114px] xl:text-[132px] 2xl:text-[150px]">
                             {id.slice(-2)}
                           </span> */}

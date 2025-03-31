@@ -96,6 +96,30 @@ export const featuredProductsData = [
       },
     ],
   },
+  {
+    id: "04",
+    category: "Aluminium Radiators",
+    products: [
+      {
+        id: "Ar01",
+        image: quico3001,
+        title: "Quico 3",
+        desc: "certifications (e.g., ISO 9001, Energy Star, CE Marking) as clickable icons",
+      },
+      {
+        id: "Ar02",
+        image: quico3002,
+        title: "Quico 3",
+        desc: "certifications (e.g., ISO 9001, Energy Star, CE Marking) as clickable icons",
+      },
+      {
+        id: "Ar03",
+        image: quico3003,
+        title: "Quico 3",
+        desc: "certifications (e.g., ISO 9001, Energy Star, CE Marking) as clickable icons",
+      },
+    ],
+  },
 ];
 
 // -------- -------- MAIN CATEGORIES DATA -------- --------
