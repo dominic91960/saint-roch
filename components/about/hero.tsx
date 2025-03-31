@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import React from "react";
 import Image from "next/image";
 import Innoimgae from "@/assets/images/landing-page/innovation/product.png";
-import "../about/aboutstyle.css";
+// import "../about/aboutstyle.css";
 import Since1903 from "../../assets/images/about/since1903.png";
 import TheRokor from "../../assets/images/about/therokor.png";
 import Footerimage from "../../assets/images/about/footerimage.png";
